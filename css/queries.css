@@ -1,0 +1,42 @@
+/* A partir de desktop pequeno */
+@media (max-width: 1250px){
+	/* tamanho dos textos do site */
+	html, body {
+		font-size: 15px;
+	}
+	.col-md {
+		width: 100%;
+	}
+}
+/* Tablets */
+@media (max-width: 951px){
+	/* tamanho dos textos do site */
+	html, body {
+		font-size: 14px;
+	}
+	.hide-mobile {
+		display: none;
+	}
+	.show-mobile {
+		display: block;
+	}
+	.col-sm {
+		width: 100%;
+	}
+	[class*="col-"] {
+		width: 100%;
+	}
+}
+/* Celulares */
+@media (max-width: 480px){
+	/* tamanho dos textos do site */
+	html, body {
+		font-size: 13px;
+	}
+	/* correcao slider */
+	.center__slider {
+		display: block!important;
+	}
+	/*remocao de margin específica*/
+	.item > .col-6:nth-child(2) { padding: .93em;  }
+}
