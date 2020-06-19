@@ -252,17 +252,21 @@ header#menu .logo a {
 	/*reset*/
 	padding: 0;
 }
+.item .col-6:first-of-type {
+	padding: 0;
+}
 .item .picture {
 	filter: opacity(.9);
 	height: 640px;
-	/*bg*/
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
 	transition: all .3s ease;
 }
 .item:hover .picture {
 	filter: opacity(1);
+}
+.item .picture img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 /*.blue { background-color: #0e3e5d; }*/
 .white { background-color: #fff; }
