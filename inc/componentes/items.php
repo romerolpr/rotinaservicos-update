@@ -11,13 +11,15 @@ include('inc/componentes/vetor/vetKey.php'); //include vetor dos serviços
 $i=0;
 foreach ($vetKey as $num => $vetor):
 	$i++;
-	($i % 2) ? $color = 'white' : $color = 'gray';
+	($i % 2) ? $color = 'gray' : $color = 'white';
+
+	$caminho = $url.'img/'.$vetor['cover'];
 
 ?>
 
 	<div class="item">
 		<div class="col-6 picture hide-mobile">
-			<img src="<?=$url?>img/<?=$vetor['cover']?>.jpg" alt="<?=$vetor['name']?> - <?=$nomeSite?>">
+			<img src="<?=$caminho?>.jpg" alt="<?=$vetor['name']?> - <?=$nomeSite?>">
 		</div>
 		<div class="col-6 align <?=$color?>">
 			<div class="container">

@@ -4,7 +4,7 @@
 $url='http://'.$_SERVER["HTTP_HOST"];
 $explode=explode('/',$_SERVER["REQUEST_URI"]);
 $uri=$explode[1];
-if($_SERVER["HTTP_HOST"]=='127.0.0.1:8080'||$_SERVER["HTTP_HOST"]=='localhost'){
+if($_SERVER["HTTP_HOST"]=='127.0.0.1'||$_SERVER["HTTP_HOST"]=='localhost'){
 	$url='http://'.$_SERVER["HTTP_HOST"].'/'.$uri.'/';
 } else {
 	$url='http://'.$_SERVER["HTTP_HOST"].'/';
@@ -38,8 +38,9 @@ include 'inc/base/menu.php';
 //canais
 include 'inc/base/canais.php';
 
-//Telefones do site
-$fone[0]				= array($ddd,'3564-9493','phone');
+//telefones
+include 'inc/base/fone.php';
+
 //Whatsapp do site
 $whatsapp				= false;
 

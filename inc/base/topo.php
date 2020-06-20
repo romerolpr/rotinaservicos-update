@@ -2,7 +2,7 @@
 	<div class="navtop hide-mobile">
 		<div class="container">
 			<div class="fleft">
-				<span><i class="fas fa-map-marker-alt"></i> <?=$contatoAddress.', CEP: '.$contatoCep.', '.$UF;?></span>
+				<span><i class="fas fa-map-marker-alt"></i> <?=$contatoAddress.', Cep '.$contatoCep.', '.$UF;?></span>
 			</div>
 			<div class="fright">
 				<?php
