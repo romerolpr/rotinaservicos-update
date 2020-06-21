@@ -35,7 +35,7 @@ session_start();
 	include('css/style.css');
 	include('css/base.css');
 	include('css/queries.css');
-	include('css/fontawesome/all.css');
+	include('css/fontawesome.css');
 
 	?>
 

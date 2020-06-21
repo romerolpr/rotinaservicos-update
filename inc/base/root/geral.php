@@ -4,7 +4,7 @@
 $url='http://'.$_SERVER["HTTP_HOST"];
 $explode=explode('/',$_SERVER["REQUEST_URI"]);
 $uri=$explode[1];
-if($_SERVER["HTTP_HOST"]=='127.0.0.1'||$_SERVER["HTTP_HOST"]=='localhost'){
+if($_SERVER["HTTP_HOST"]!=='rotinaservicos.com'){
 	$url='http://'.$_SERVER["HTTP_HOST"].'/'.$uri.'/';
 } else {
 	$url='http://'.$_SERVER["HTTP_HOST"].'/';
@@ -44,12 +44,8 @@ include 'inc/base/fone.php';
 //Whatsapp do site
 $whatsapp				= false;
 
-//email
-$emailEnvia				= 'pblucasromero@gmail.com';
-$emailPass				= '595959salvesaopaulo';
-
-//esconde erros
-error_reporting(0);
-ini_set(“display_errors”, 0 );
+// //esconde erros
+// error_reporting(0);
+// ini_set(“display_errors”, 0 );
 
 ?>
