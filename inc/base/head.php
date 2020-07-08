@@ -38,6 +38,7 @@ session_start();
 	include('css/queries.css');
 	include('css/fontawesome/all.css');
 	include('inc/mail/css/message-alert.css');
+	include('css/fontawesome.css');
 
 	?>
 

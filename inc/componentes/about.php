@@ -20,7 +20,7 @@
 			<div class="box center wrap">
 				<div class="box__pic icon">
 					<div class="box__btxt">
-						<h2><i class="far fa-check-circle"></i></h2>
+						<h2><i class="far fa-check"></i></h2>
 					</div>
 				</div>
 				<div class="clearfix"></div>

@@ -15,10 +15,8 @@
 	<label for="assunto">Motivo de contato <span>*</span></label>
 	<select name="assunto" required>
 		<option value="">-- Selecione --</option>
-		<option value="Contato de rotina">Contato de rotina</option>
-		<option value="Assunto urgente">Assunto urgente</option>
+		<option value="Contato">Contato padrão</option>
 		<option value="Curriculo">Envio de currículo</option>
-		<option value="Duvidas ou esclarecimentos">Duvidas ou esclarecimentos</option>
 		<option value="Outro">Outro</option>
 	</select>
 

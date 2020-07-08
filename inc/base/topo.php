@@ -8,7 +8,7 @@
 				<?php
 				foreach ($fone as $key => $value):
 					echo '
-						<a href="tel:'.$value[0].$value[1].'"><span><i class="fas fa-'.$value[2].'-alt"></i> '.$value[0]. ' ' .$value[1].'</span></a>
+						<a href="tel:'.$value[0].$value[1].'"><span><i class="fas fa-'.$value[2].'"></i> '.$value[0]. ' ' .$value[1].'</span></a>
 					';
 					if($key >= 2) break;
 				endforeach;

@@ -597,7 +597,6 @@ footer .canais a > .btn {
 	height: 20px;
 	color: #444;
 	margin: 0 .3em; 
-	background-color: #f9f9f9;
 }
 footer .canais a > .btn:hover {
 	box-shadow: 0px 3px 15px rgba(0,0,0,.05)
@@ -646,3 +645,29 @@ footer .canais a > .btn:hover {
 	border-radius: 5px;
 	font-weight: bold;
 }
+.canais.btn:hover {
+	box-shadow: 0px 3px 15px rgba(0,0,0,.05);
+	color: #fff!important;
+}
+.hover_facebook,
+.hover_twitter,
+.hover_instagram,
+.hover_linkedin,
+.hover_youtube,
+.hover_tumblr {
+	background: #fff;
+	transition: all .3s ease;
+}
+/*estilo no hover nos botoes*/
+span.hover_facebook:hover { 
+	background-color: #3d5b99; }
+span.hover_twitter:hover { 
+	background-color: #1da1f2; }
+span.hover_instagram:hover { 
+	background-color: #ed4956; }
+span.hover_linkedin:hover { 
+	background-color: #0073b0; }
+span.hover_youtube:hover { 
+	background-color: #ff0000; }
+span.hover_tumblr:hover { 
+	background-color: #001935; }
