@@ -23,7 +23,7 @@
 		<div class="container">	
 			<div class="logo fleft">
 				<a href="<?=$url?>" alt="<?=$nomeSite?>">
-					<img src="<?=$url?>img/logo.png" alt="Logo - <?=$nomeSite?>" title="Logo - <?=$nomeSite?>" width="50" class="fleft">
+					<img src="<?=$url?>images/logo.png" alt="Logo - <?=$nomeSite?>" title="Logo - <?=$nomeSite?>" width="50" class="fleft">
 					<span><strong>/rotinaservicos</strong></span>
 				</a>
 			</div>

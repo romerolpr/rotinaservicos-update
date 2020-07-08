@@ -4,6 +4,7 @@ $desc       = ''.$title.' - fundada em 1997 e desde então atua nas áreas de po
 $key        = ''.$title.', terceirizados, servicos, servicos prediais, predios, ap, casa, condominio';
 $var        = ''.$title.',Inicio';
 include 'inc/base/head.php';
+
 ?>
 </head>
 <body>
@@ -14,19 +15,22 @@ include 'inc/base/head.php';
 	<!-- conteudo -->
 	<div class="content">
 		<div class="anchor">
-			<?php include('inc/componentes/home.php'); ?>
+			<?php 
+			include('inc/componentes/about.php'); 
+			include('inc/componentes/invite.php'); 
+			?>
 		</div>
 		<div class="anchor">	
 			<?php include('inc/componentes/items.php'); ?>
 		</div>
 		<!-- Contato, forms -->
 		<div class="anchor">
-			<?php include('inc/componentes/contato.php'); ?>
+			<?php include('inc/componentes/contact.php'); ?>
 		</div>
 	</div>
 	<!-- Footer, rodapé -->
 	<?php 
-	//footer e "lab"
+	//footer e scrips
 	include('inc/base/footer.php');
 	include('inc/base/root/scripts.php'); 
 	?>	

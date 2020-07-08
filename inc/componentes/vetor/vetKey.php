@@ -13,7 +13,7 @@ $vetKey[0] = array(
 $vetKey[1] = array(
 'name' 		=> 'Limpeza',
 'content' 	=> 'O profissional designado auxiliar de limpeza é aquele que se dedica profissionalmente ao asseio de locais como condomínios residenciais, empresas, indústrias, etc. Tem como principais atividades a conservação e limpeza de edifícios e outros locais, além de efetuar a remoção de lixo, fazer lavagem de vidraças e persianas, desentupir ralos e pias e executar outras tarefas da mesma natureza, dentre outros. Nossos colaboradores são instruídos a sempre fazer uso de EPIs (equipamento de proteção individual) conforme cada necessidade, além de atentar sempre para o correto uso de produtos de limpeza e equipamentos.',
-'cover'		=> 'limpeza'
+'cover'		=> 'limpeza-old'
 
 );
 
@@ -27,14 +27,14 @@ $vetKey[2] = array(
 $vetKey[3] = array(
 'name' 		=> 'Zeladoria',
 'content' 	=> 'É o funcionário que trabalha na área de limpeza e manutenção completa dos edifícios. O Zelador é o profissional a quem compete a ter contato direto com a administração do condomínio, agindo como preposto do síndico, transmitir as ordens dos superiores e fiscalizar seu cumprimento, fiscalizar as áreas de uso comum, verificar o funcionamento das instalações hidráulicas e elétricas, assim como aparelhos de uso comum, além de zelar pela observância da disciplina no edifício, de acordo com seu regimento interno, e muito mais.',
-'cover'		=> 'limpeza'
+'cover'		=> 'zelador'
 
 );
 
 $vetKey[4] = array(
 'name' 		=> 'Manutenção Predial',
 'content' 	=> 'O profissional denominado auxiliar de manutenção deve estar preparado para detectar problemas, fazer o diagnóstico e solucioná-los. Quando necessário, deve solicitar orçamentos e acompanhar o reparo.',
-'cover'		=> 'predial'
+'cover'		=> 'limpeza'
 
 );
 

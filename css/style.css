@@ -7,9 +7,18 @@ html, body {
 /*hover*/
 a { opacity: .8;transition: all .3s ease; } a:hover { opacity: 1 }
 h2 {
+	/*position: relative;*/
 	font-size: 2.25em;
 	line-height: 1.25em;
-	color: #323f52;
+	color: #294564;
+}
+h2.sublime::after {
+	content: '';
+	display: block;
+    width: 150px;
+    height: 3px;
+    background: #91bf32;
+    margin: .32em auto;
 }
 h3 {
 	margin: .64em 0;
@@ -22,28 +31,6 @@ p {
 }
 .w-100 { width: 100%; }
 .h-100 { height: 100%; }
-/*Estilizando load*/
-.load { 
-	height: 100%;
-	display: flex; 
-	justify-content: center;
-	align-items: center; 
-}
-.load > span {
-	float: left;
-	width: 25px;
-	height: 25px;
-	background-color: transparent;
-	border-radius: 50%;
-	border: 4px solid #eee; 
-	border-left-color: #0064a8;
-	animation: load .4s ease infinite; 
-}
-@keyframes load{
-	to {
-		transform: rotate(360deg);
-	}
-}
 /*List*/
 ul.list {
 	padding: 0 0 0 2.2em;
@@ -54,8 +41,9 @@ ul.list > li {
 }
 /*Content*/
 .content {
+	float: left;
 	position: relative;
-	box-shadow: 0 -10px 25px 0 rgba(0,0,0,0.05);
+	box-shadow: 0 -5px 20px 0 rgba(0,0,0,0.08);
 }
 /*Estilização do menu*/
 .fixed{
@@ -95,7 +83,7 @@ header#menu {
 	float: left;
 	width: 100%;
 	background: rgba(255,255,255.1);
-	box-shadow: 0 5px 10px 0px rgba(0,0,0,0.03);
+	box-shadow: 0 5px 10px 0px rgba(0,0,0,0.06);
 }
 header#menu nav > ul{
 	display: inline-block;
@@ -159,9 +147,8 @@ header#menu .logo a {
 .slider {
 	float: left;
 	position: relative;
-	z-index: 1;
+	z-index: -9;
 	/*config tamanho*/
-	max-height: 600px;
 	width: 100%;
 }
 .slider .txtslider {
@@ -173,10 +160,11 @@ header#menu .logo a {
 }
 .txtslider .title {
 	text-align: left;
+	margin: 0 0 20px 0;
 }
 .txtslider 
 .title h1 {
-	font-size: 4.5em!important;
+	font-size: 3.5em!important;
 	margin: 1.25em 0;
 }
 .txtslider 
@@ -187,40 +175,57 @@ header#menu .logo a {
 .slider .img {
 	position: relative;
 	width: 100%;
-	min-height: 200px;
-	height: auto;
 	overflow: hidden;
 }
-.slider .filter {
-	position: absolute;
-	top: 0; left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(255,255,255,.5);
-	z-index: 9;
-}
 .slider .moldura {
-	height: 550px;
-	background-color: #f5f5f5;
+	/*top: 0;*/
+	/*position: fixed;*/
+	overflow: hidden;
+	width: 100%;
+	height: 500px;
+	background: #f8f8f8;
+	z-index: -9;
+	display: flex;
+	justify-content: center;
+}
+.slider .moldura .filter {
+	position: absolute;
+	width: 100%;
+	height: 500px;
+	background: rgba(255,255,255,0.5);
 }
 .slider .moldura > img { 
-	min-height: 250px;
-	max-width: 100%; 
+	max-width: 100%;
+	height: 100%;
 	object-fit: cover;
 }
 .slider .center__slider {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
 	align-items: center;
-	height: 100%;
 }
 .slider .center__slider h1 {
 	margin: .25em 0;
 	font-size: 1.75em;
-	color: #444;
 }
-.slider .center__slider p { margin: .50em 0; }
+.slider .center__slider p { 
+	font-size: 1em;
+	line-height: 1.75em;
+	margin: .50em 0; 
+}
+.slider .title{
+	padding-left: 1em; 
+	border-left: 3px solid #0064a8;
+}
+.slider .center__slider h1,
+.slider .center__slider p {
+	/*color: #fff;*/
+	/*text-shadow: 0 2px 5px rgba(0,0,0,0.3);*/
+}
+.slider,
+.img,
+.center__slider {
+	height: 500px;
+}
 /*Classe padrão botao*/
 .btn {
 	float: left;
@@ -415,7 +420,19 @@ header#menu .logo a {
 	float: left;
 	background-color: #f4f4f4; 
 }
+.c-blue {
+	background-color: #294564; 
+}
+.c-blue h2,
+.c-blue p {
+	color: #fff;
+}
 /*Estilização do formulário de contato*/
+.form blockquote {
+	margin: 0 0 1.2em 0;
+	padding: 1.2em;
+	border-left: 5px solid #0064a8;
+}
 .box__form h2 {
 	margin: .65em 0;
 }
@@ -444,8 +461,8 @@ form.form select:focus {
 	border-color: #ccc;
 	box-shadow: 0 5px 15px rgba(0,0,0,.05)
 }
-
-form.form  button[type=submit]{
+.hide { display: none; }
+form.form  input[type=submit]{
 	color: #fff;
 	cursor: pointer;
 	background-color: #0064a8;
@@ -453,7 +470,7 @@ form.form  button[type=submit]{
 	transition: all .3s ease;
 	border-color: transparent;
 }
-form.form  button[type=submit]:hover { opacity: 1 }
+form.form  input[type=submit]:hover { opacity: 1 }
 form.form textarea {
 	height: 150px;
 }
@@ -465,6 +482,32 @@ form.form label {
 }
 form.form label > span {
 	color: #c5030c;
+}
+/*Estilizacao do input file*/
+.file {
+    width: 100%;
+    height:49px;
+    position: relative;
+    overflow: hidden;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+    margin-bottom: 5px;
+    text-align: center;
+    line-height: 49px;
+    cursor: pointer;
+}
+.file:hover {
+	background: #f0f0f0;
+}
+.file input {
+	cursor: pointer;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    font-size: 100px; /* Aumenta tamanho do campo */
+    opacity: 0;
+    filter: alpha(opacity=0);
 }
 /*Classe para links*/
 .link { 
@@ -559,4 +602,47 @@ footer .canais a > .btn {
 footer .canais a > .btn:hover {
 	box-shadow: 0px 3px 15px rgba(0,0,0,.05)
 	background-color: #fff;
+}
+/*archor*/
+.anchor {
+	float: left;
+	background-color: #ffff;
+}
+.scroll-hidden {overflow: hidden;}
+/*Estilizacao do whatsapp*/
+.whatsapp { opacity: 1; }
+.icon-whatsapp {
+	position: fixed;
+	right: 2%; bottom: 2%;
+	width: auto;
+	overflow: hidden;
+	z-index: 999;
+}
+.icon-whatsapp img {
+	max-width: 100px;
+}
+.opacity1 { opacity: 1 }
+/*Box de anuncio*/
+.ad__box {
+	box-sizing: border-box;
+	padding: 15px;
+	background: #66a251;
+	border-radius: 5px; 
+	margin: 0 0 1.2em 0;
+	opacity: 1;
+	transition: all .3s ease;
+}
+.ad__box h2,
+.ad__box p,
+.ad__box a {
+	color: #fff;
+}
+.ad__box:hover { opacity: .9; }
+/*tag*/
+.tag {
+	padding: .65em;
+	background: #eee;
+	color: #294564;
+	border-radius: 5px;
+	font-weight: bold;
 }

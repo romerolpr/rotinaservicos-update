@@ -34,9 +34,12 @@
 		font-size: 13px;
 	}
 	/* correcao slider */
-	.center__slider {
-		display: block!important;
-	}
 	/*remocao de margin específica*/
 	.item > .col-6:nth-child(2) { padding: .93em;  }
+	.icon-whatsapp img {
+		max-width: 50px;
+	}
+	.tmobile {
+		font-size: 1em!important;
+	}
 }
