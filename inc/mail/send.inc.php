@@ -1,26 +1,27 @@
 <?php
 
 
-  //base
   $nome = $input['nome'];
   $telefone = $input['telefone'];
   $telefone_2 = $input['telefone_2'];
   $email = $input['email'];
   $mensagem = strlen(trim($input['mensagem']));
-  $anexo = $input['anexo']['tmp_name'] ? $input['anexo'] : "Sem anexo";
-
-  //cliente
   $endereco_condominio = $input['endereco_condominio'];
   $area_total_condominio = $input['area_total_condominio'];
   $quantidade_apartamentos = $input['quantidade_apartamentos'];
   $valor_medio = $input['valor_medio'];
-  $anexo = $input['anexo']['tmp_name'] ? $input['anexo'] : "Sem anexo";
 
   //telefone 2
-  $telefone_2 == "" or !$telefone_2 ? $telefone_2 = "Não informado" : $telefone_2 = $input['telefone_2'];
+  $telefone_2 == "" || !$telefone_2 ? $telefone_2 = "Não informado" : $telefone_2 = $input['telefone_2'];
 
   //assunto
   $input['assunto'] == "" ? $assunto = "Orcamento de cliente" : $assunto = $input['assunto'];
+
+  //anexo
+  $anexo = $input['anexo']['tmp_name'] ? $input['anexo'] : "Sem anexo";
+
+  //quebra sessao do recaptcha
+  unset($input['g-recaptcha-response']);
 
 
 // DEFINIÇÃO DA MENSAGEM
@@ -40,7 +41,7 @@ Mensagem recebida de {$nome} às {$today} via formulário do site
 <tr>
 <th colspan='2' style='font-weight: bold;padding-left: .5em;'>
 <a href='https://www.rotinaservicos.com/' width='150' title='rotinaservicos' alt='rotinaservicos'>
-<img src='https://static.wixstatic.com/media/a127fb_44ac34601ebc4ec781943876ab9e9894~mv2.jpg/v1/fill/w_440,h_413,al_c,lg_1,q_80/LOGO%20ATUAL.webp' width='100' title='rotinaservicos' alt='rotinaservicos' style='margin: 20px 0'>
+<img src='https://www.rotinaservicos.com/images/logo.png' width='100' title='rotinaservicos' alt='rotinaservicos' style='margin: 20px 0'>
 </a>
 </th>
 </tr>

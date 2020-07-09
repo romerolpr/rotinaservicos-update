@@ -32,6 +32,17 @@
 					<?php include 'inc/base/menu.inc.php'; ?>
 				</ul>
 			</nav>
+			<div class="show-sm-mobile menu-mobile">
+				<button class="s-mobile"><i class="fa fa-bars"></i></button>
+				<div class="nav-mobile showUpMenu">
+					<ul>
+						<?php 
+						$footer = true;
+						include 'inc/base/menu.inc.php'; 
+						?>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</header>
 	<div id="mblock"></div>

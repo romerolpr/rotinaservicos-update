@@ -85,6 +85,7 @@ if(isset($input['sendForm']) && !empty($input['sendForm'])):
 		endif;
 
 		$input['anexo'] = $_FILES['anexo'];
+		$input['g-recaptcha-response'] = $_POST['g-recaptcha-response'];
 
 		//realiza o envio
 		include('send.contact.php');

@@ -7,7 +7,7 @@ $uri=$explode[1];
 if($_SERVER["HTTP_HOST"]!=='rotinaservicos.com'){
 	$url='http://'.$_SERVER["HTTP_HOST"].'/'.$uri.'/';
 } else {
-	$url='http://'.$_SERVER["HTTP_HOST"].'/';
+	$url='https://'.$_SERVER["HTTP_HOST"].'/';
 }
 
 //variaveis globais

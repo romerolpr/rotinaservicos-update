@@ -1,3 +1,4 @@
+.show-sm-mobile {display: none;}
 /* A partir de desktop pequeno */
 @media (max-width: 1250px){
 	/* tamanho dos textos do site */
@@ -41,5 +42,8 @@
 	}
 	.tmobile {
 		font-size: 1em!important;
+	}
+	.show-sm-mobile {
+		display: block;
 	}
 }

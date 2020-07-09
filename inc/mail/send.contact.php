@@ -11,8 +11,6 @@ if( recaptcha ):
 
   //verifica var recaptcha
   if(isset($input['g-recaptcha-response']) && !empty($input['g-recaptcha-response'])):
-    //ativa recaptcha
-    $response = $input['g-recaptcha-response'];
 
     // Processa o envio
     include("send.inc.php");
@@ -29,9 +27,6 @@ if( recaptcha ):
   endif;
 
 else:
-
-  // Sem recaptcha
-  $response = true;
 
   // Processa o envio
   include("send.inc.php");

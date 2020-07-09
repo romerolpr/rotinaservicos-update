@@ -63,7 +63,30 @@ session_start();
 <meta property="og:description" content="<?=$desc?>">
 <meta property="og:site_name" content="<?=$nomeSite?>">
 <link rel="canonical" href="<?=$url.$urlPagina?>">
-<link rel="icon" href="<?=$url?>img/logo.png">
-<link rel="apple-touch-icon" href="<?=$url?>img/logo.png"/>
+<link rel="icon" href="<?=$url?>images/logo.png">
+<link rel="apple-touch-icon" href="<?=$url?>images/logo.png"/>
 
 <title><?=$title.' - '.$nomeSite?></title>
+
+<script>
+	$(document).ready(function(){
+		var i = 0;
+		$('.s-mobile').on('click', function(){
+			i++;
+			if(i > 0 && i == 1){
+				$('.nav-mobile').show();
+				$('.nav-mobile').removeClass('hideDownMenu')
+				$('.nav-mobile').addClass('showUpMenu');
+			} else if(i > 1 && i == 2){
+				$('.nav-mobile').removeClass('showUpMenu');
+				$('.nav-mobile').addClass('hideDownMenu');
+				$('.s-mobile').attr('disabled','disabled');
+				setTimeout(function(){
+					$('.nav-mobile').hide();
+					$('.s-mobile').removeAttr('disabled');
+				},800)
+				i=0;
+			}
+		});
+	});
+</script>
