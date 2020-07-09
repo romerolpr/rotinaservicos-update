@@ -1,7 +1,9 @@
 <div class="clearfix"></div>
+<br>
 <div class="fleft" id="servicos">
 
-	<h2 class="tcenter">Serviços Prestados</h2>
+	<h2 class="tcenter sublime">Serviços Prestados</h2>
+	<!-- <h3 class="tcenter">Os melhores serviços para seu condomínio estão na <strong><?=$nomeSite?></strong></h3> -->
 	<br>
 	
 <?php
@@ -11,9 +13,16 @@ include('inc/componentes/vetor/vetKey.php'); //include vetor dos serviços
 $i=0;
 foreach ($vetKey as $num => $vetor):
 	$i++;
-	($i % 2) ? $color = 'gray' : $color = 'white';
 
-	$caminho = $url.'img/'.$vetor['cover'];
+	if($i % 2):
+		$color = 'c-gray'; 
+
+	else:
+		$color = 'c-blue'; 
+
+	endif;
+
+	$caminho = $url.'images/'.$vetor['cover'];
 
 ?>
 

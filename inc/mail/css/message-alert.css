@@ -1,0 +1,278 @@
+/*Style do corpo do alert*/
+
+.messageAlert {
+	position: fixed;
+	top: 0; left: 0;
+	z-index: 9999998;
+}
+
+.messageAlert,
+.b__shadow {
+	width: 100%;
+	height: 100%;
+}
+
+.messageAlert .b__shadow {
+	position: absolute;
+	background: rgba(0,0,0,0.5);
+	/*animation*/
+	animation: upShadow .6s ease;
+	transition: all .6s ease;
+}
+
+.messageAlert .container-message {
+    height: 100%;
+    margin: 1em;
+}
+
+.messageAlert .b__wall {
+	position: relative;
+	max-width: 540px;
+	margin: auto; /* Centralizar */
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	z-index: 99;
+	top: 40px;
+	/*animation*/
+	animation: upWall .3s ease;
+	transition: all .3s ease;
+}
+
+@keyframes upWall {
+	0% {
+		top: 0;
+	}
+
+	100% {
+		top: 40px;
+	}
+}
+
+@keyframes upShadow {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.messageAlert .b__wall__head {
+	width: 100%;
+	padding: 10px;
+	/*cor de fundo padrao*/
+	background: #f5f5f5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.messageAlert .b__wall__head,
+.messageAlert .b__wall__body {
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.messageAlert .b__wall > .b__wall__head.error {
+	background: #d34b4b;
+}
+
+.messageAlert .b__wall > .b__wall__head.warning {
+	background: #f69f02;
+}
+
+.messageAlert .b__wall > .b__wall__head.success {
+	background: #12b33d;
+}
+
+
+.messageAlert .b__wall__body {
+	display: table;
+	width: 100%;
+	height: 100%;
+    border-radius: 0 0 5px 5px;
+    background: #fff;
+}
+
+.messageAlert .b__wall__body h2 {
+	margin: .6em 0;
+}
+.messageAlert .b__wall__body #b_btn__close {
+	width: 100%;
+	cursor: pointer;
+	margin: 1em 0;
+}
+
+/*Style dos icones*/
+
+.svg-box {
+    display:inline-block;
+    position: relative;
+    width:150px;
+}
+
+.green-stroke,
+.red-stroke,
+.yellow-stroke {
+	width: 150px;
+}
+
+.green-stroke {
+    stroke:white;
+}
+
+.red-stroke {
+    stroke:white;
+}
+
+.yellow-stroke {
+    stroke:white;
+}
+
+
+.circular circle.path {
+    stroke-dasharray: 330;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    opacity: .5;
+    animation: .7s draw-circle ease-out;
+}
+
+/*------- Checkmark ---------*/
+.checkmark{
+	stroke-width: 6.25;
+    stroke-linecap: round;
+	position:absolute;
+    top: 56px;
+    left: 49px;
+    width: 52px;
+    height: 40px;
+}
+
+.checkmark path {
+    animation: 1s draw-check ease-out;
+}
+
+@keyframes draw-circle {
+    0% {
+        stroke-dasharray: 0,330;
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+
+    80% {
+        stroke-dasharray: 330,330;
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0.4;
+    }
+}
+
+@keyframes draw-check {
+    0% {
+        stroke-dasharray: 49,80;
+        stroke-dashoffset: 48;
+        opacity: 0;
+    }
+
+    50% {
+        stroke-dasharray: 49,80;
+        stroke-dashoffset: 48;
+        opacity: 1;
+    }
+
+    100% {
+        stroke-dasharray: 130,80;
+        stroke-dashoffset: 48;
+    }
+}
+
+/*---------- Cross ----------*/
+
+.cross {
+    stroke-width:6.25;
+    stroke-linecap: round;
+    position: absolute;
+    top: 54px;
+    left: 54px;
+    width: 40px;
+    height: 40px;
+}
+
+.cross .first-line {
+    animation: 0.7s draw-first-line ease-out;
+}
+
+.cross .second-line {
+    animation: 0.7s draw-second-line ease-out;
+}
+
+@keyframes draw-first-line {
+    0% {
+        stroke-dasharray: 0,56;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 0,56;
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dasharray: 56,330;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-second-line {
+    0% {
+        stroke-dasharray: 0,55;
+        stroke-dashoffset: 1;
+    }
+
+    50% {
+        stroke-dasharray: 0,55;
+        stroke-dashoffset: 1;
+    }
+
+    100% {
+        stroke-dasharray: 55,0;
+        stroke-dashoffset: 70;
+    }
+}
+
+.alert-sign {
+    stroke-width:6.25;
+    stroke-linecap: round;
+    position: absolute;
+    top: 40px;
+    left: 68px;
+    width: 15px;
+    height: 70px;
+    animation: 0.5s alert-sign-bounce cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.alert-sign .dot {
+    stroke:none;
+    fill: white;
+}
+
+@keyframes alert-sign-bounce {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

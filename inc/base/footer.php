@@ -1,4 +1,15 @@
-<footer>
+<?php
+	
+	//whatsapp
+	if (isset($whatsapp) && !empty($whatsapp) && $whatsapp[2] != false):
+
+		include('inc/componentes/whatsapp-button.php');
+
+	endif;
+
+?>
+
+<footer class="effect fadeIn">
 	<div class="col-12 p-40">
 		<div class="container">
 			<div class="col-6">
@@ -17,7 +28,7 @@
 					<a class="mail" href="mailto:<?=$contatoEmail?>" alt="<?=$contatoEmail?>"><i class="fas fa-envelope"></i> <?=$contatoEmail?></a>
 				</p>
 				<p>
-					<i class="fas fa-map-marker-alt"></i> <?=$contatoAddress.', '.$bairro?><?= ' Cep '.$contatoCep.', '.$cidade.' - '.$UF; ?>
+					<i class="fas fa-map-marker-alt"></i> <?=$contatoAddress.', '.$bairro?>, <?= ' Cep '.$contatoCep.', '.$cidade.' - '.$UF; ?>
 				</p>
 			</div>
 			<div class="col-3">
@@ -25,7 +36,8 @@
 				<nav class="menu__footer">
 					<ul>
 						<?php
-						$submenu = false;
+						$footer 	= true;
+						$submenu 	= false;
 						include 'inc/base/menu.inc.php';
 						?>
 					</ul>

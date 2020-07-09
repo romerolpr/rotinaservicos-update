@@ -7,7 +7,7 @@ $uri=$explode[1];
 if($_SERVER["HTTP_HOST"]!=='rotinaservicos.com'){
 	$url='http://'.$_SERVER["HTTP_HOST"].'/'.$uri.'/';
 } else {
-	$url='http://'.$_SERVER["HTTP_HOST"].'/';
+	$url='https://'.$_SERVER["HTTP_HOST"].'/';
 }
 
 //variaveis globais
@@ -42,10 +42,13 @@ include 'inc/base/canais.php';
 include 'inc/base/fone.php';
 
 //Whatsapp do site
-$whatsapp				= false;
+$text					= 'Olá, Gostaria de saber mais sobre a'; // mensagem do whatsapp
+$whatsapp 				= array('' . $ddd . '994210145', $text.' '.$nomeSite . ' - ' . $sloganSite, false);
 
-// //esconde erros
-// error_reporting(0);
-// ini_set(“display_errors”, 0 );
+//esconde erros
+error_reporting(0);
+ini_set(“display_errors”, 0 );
+
+$tabela = false;
 
 ?>

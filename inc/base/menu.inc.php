@@ -2,14 +2,17 @@
 //verifica se existe menu
 if(isset($menu)&&!empty($menu)):
 	foreach ($menu as $key => $value):
+
+		($value[5]) ? $classBudget = array('__btn', 'data-budget="'.$value[5].'"') : $classBudget = false;
+
 		//percorre o menu
 		if($value[2]==true&&isset($submenu)&&$submenu!=false):
 			//monta submenu
 		else:
-			if($value[4]===true) $value[4]='class="active"';
+			($value[4]===true) ? $value[4]='class="active"' : $value[4]='';
 			if($value[3]=='goto'):
 				echo '
-				<li '.$value[4].'><a class="goto" href="'.$value[0].'" alt="'.$value[1].'" title="'.$value[1].'">'.$value[1].'</a></li>
+				<li '.$value[4].'><a class="goto '.$classBudget[0].'" '.$classBudget[1].' href="'.$value[0].'" alt="'.$value[1].'" title="'.$value[1].'">'.$value[1].'</a></li>
 			';
 			elseif($value[3]=='blank'):
 				echo '
@@ -27,3 +30,7 @@ else:
 endif;
 
 ?>
+
+<?php if(!$footer): ?>
+<a href="#contato" data-budget="cliente" class="__btn goto" title="Solicite seu orçamento e ganhe 5% de desconto!"><span class="btn-topo">Solicite seu orçamento!</span></a>
+<?php endif; ?>

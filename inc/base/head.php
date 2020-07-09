@@ -33,8 +33,11 @@ session_start();
 
 	include('css/normalize.css');
 	include('css/style.css');
+	include('css/effects.css');
 	include('css/base.css');
 	include('css/queries.css');
+	include('css/fontawesome/all.css');
+	include('inc/mail/css/message-alert.css');
 	include('css/fontawesome.css');
 
 	?>
@@ -60,17 +63,30 @@ session_start();
 <meta property="og:description" content="<?=$desc?>">
 <meta property="og:site_name" content="<?=$nomeSite?>">
 <link rel="canonical" href="<?=$url.$urlPagina?>">
-<link rel="icon" href="<?=$url?>img/logo.png">
-<link rel="apple-touch-icon" href="<?=$url?>img/logo.png"/>
-
+<link rel="icon" href="<?=$url?>images/logo.png">
+<link rel="apple-touch-icon" href="<?=$url?>images/logo.png"/>
 
 <title><?=$title.' - '.$nomeSite?></title>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163505904-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-163505904-1');
-</script> -->
+<script>
+	$(document).ready(function(){
+		var i = 0;
+		$('.s-mobile').on('click', function(){
+			i++;
+			if(i > 0 && i == 1){
+				$('.nav-mobile').show();
+				$('.nav-mobile').removeClass('hideDownMenu')
+				$('.nav-mobile').addClass('showUpMenu');
+			} else if(i > 1 && i == 2){
+				$('.nav-mobile').removeClass('showUpMenu');
+				$('.nav-mobile').addClass('hideDownMenu');
+				$('.s-mobile').attr('disabled','disabled');
+				setTimeout(function(){
+					$('.nav-mobile').hide();
+					$('.s-mobile').removeAttr('disabled');
+				},800)
+				i=0;
+			}
+		});
+	});
+</script>
