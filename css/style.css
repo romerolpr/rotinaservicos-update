@@ -5,7 +5,13 @@ html, body {
 	word-wrap: break-word;
 }
 /*hover*/
-a { opacity: .8;transition: all .3s ease; } a:hover { opacity: 1 }
+a { 
+	opacity: .8;
+	transition: all .3s ease; 
+}
+a:hover { 
+	opacity: 1 
+}
 h2 {
 	font-size: 2.25em;
 	line-height: 1.25em;
@@ -545,7 +551,7 @@ footer .menu__footer > ul li:hover {
 	height: 12px;
 }
 /*Canais no footer*/
-footer .canais a > .btn {
+footer .canais a .btn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
