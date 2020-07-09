@@ -701,7 +701,7 @@ footer .canais a .btn:hover {
 .whatsapp { opacity: 1; }
 .icon-whatsapp {
 	position: fixed;
-	right: 2%; bottom: 2%;
+	right: 2%; bottom: 3%;
 	width: auto;
 	overflow: hidden;
 	z-index: 999;
