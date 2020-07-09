@@ -27,7 +27,7 @@
 	<input type="text" name="area_total_condominio" placeholder="0.000" value="<?php if(isset($input['area_total_condominio'])&&!empty($input['area_total_condominio'])) echo $input['area_total_condominio']?>" required>
 
 	<label for="quantidade_apartamentos">Quantidade Apartamentos/ Conjuntos <span>*</span></label>
-	<input type="number" min="0" max="1000" step="2" name="quantidade_apartamentos" placeholder="00" value="<?php if(isset($input['quantidade_apartamentos'])&&!empty($input['quantidade_apartamentos'])) echo $input['quantidade_apartamentos']?>" required>
+	<input type="number" min="0" max="1000" step="1" name="quantidade_apartamentos" placeholder="0" value="<?php if(isset($input['quantidade_apartamentos'])&&!empty($input['quantidade_apartamentos'])) echo $input['quantidade_apartamentos']?>" required>
 
 	<label for="valor_medio">Valor Médio Do Condomínio <span>*</span></label>
 	<input type="text" name="valor_medio" placeholder="R$ 0.000,0" value="<?php if(isset($input['valor_medio'])&&!empty($input['valor_medio'])) echo $input['valor_medio']?>" required>

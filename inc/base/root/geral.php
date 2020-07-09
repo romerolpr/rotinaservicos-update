@@ -48,10 +48,7 @@ $whatsapp 				= array('' . $ddd . '994210145', $text.' '.$nomeSite . ' - ' . $sl
 //esconde erros
 error_reporting(0);
 ini_set(“display_errors”, 0 );
-$whatsapp				= false;
 
-// //esconde erros
-// error_reporting(0);
-// ini_set(“display_errors”, 0 );
+$tabela = false;
 
 ?>

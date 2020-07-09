@@ -1,30 +1,13 @@
 <?php
+include('inc/base/root/geral.php');
+if(!$tabela) header('location:http://www.rotinaservicos.com');
 
-
-  //base
-  $nome = $input['nome'];
-  $telefone = $input['telefone'];
-  $telefone_2 = $input['telefone_2'];
-  $email = $input['email'];
-  $mensagem = strlen(trim($input['mensagem']));
-  $anexo = $input['anexo']['tmp_name'] ? $input['anexo'] : "Sem anexo";
-
-  //cliente
-  $endereco_condominio = $input['endereco_condominio'];
-  $area_total_condominio = $input['area_total_condominio'];
-  $quantidade_apartamentos = $input['quantidade_apartamentos'];
-  $valor_medio = $input['valor_medio'];
-  $anexo = $input['anexo']['tmp_name'] ? $input['anexo'] : "Sem anexo";
-
-  //telefone 2
-  $telefone_2 == "" or !$telefone_2 ? $telefone_2 = "Não informado" : $telefone_2 = $input['telefone_2'];
-
-  //assunto
-  $input['assunto'] == "" ? $assunto = "Orcamento de cliente" : $assunto = $input['assunto'];
-
-
-// DEFINIÇÃO DA MENSAGEM
-$mail->Subject  = "ASSUNTO (" . strtoupper($assunto) . ") - " . $nomeSite . ""; // Assunto da mensagem
+//simulando valores
+$nome 		= 'Nome';
+$email      = 'email@email.com';
+$today  	= '1 de Maio de 2020, 00:00';
+$anexo  	= array('name' => 'anexo');
+$input		= array('nome' => 'João Teste','email' => $email,'mensagem' => 'Teste de mensagem');
 
 $Body = "
 <table style='font: 100% sans-serif;background-color: #efe;border-collapse: collapse;empty-cells: show;border: 1px solid #7a7;width: 800px;'>
@@ -45,10 +28,10 @@ Mensagem recebida de {$nome} às {$today} via formulário do site
 </th>
 </tr>
 <tr>
-<td style='text-align:left;padding-right: .5em;padding:.5em .5em .5em 3em;width: 65%;'>
+<td style='text-align:left;padding-right: .5em;padding:.5em .5em .5em 3em;width: 50%;'>
 <font size='-1'><b>{$nomeSite} </b>&lt;rotina.servicos@gmail.com&gt;</font>
 </td>
-<td align='right' style='text-align:left;padding-right: .5em;padding:.5em .5em .5em 0;width: 35%;'>
+<td align='right' style='text-align:left;padding-right: .5em;padding:.5em .5em .5em 0;width: 50%;'>
 <font size='-1'>{$today}</font>
 </td>
 </tr>
@@ -93,42 +76,4 @@ Mensagem automática enviada por - www.rotinaservicos.com em {$today}
 </tbody>
 </table>";
 
-$mail->Body = $Body;
-
-$emailContato = 'rotina.servicos@gmail.com';
-
-// DADOS DO DESTINATÁRIO
-$mail->AddAddress($emailContato, $nomeSite); // Define qual conta de email receberá a mensagem
-//$mail->AddAddress('recebe2@dominio.com.br'); // Define qual conta de email receberá a mensagem
-//$mail->AddCC('copia@dominio.net'); // Define qual conta de email receberá uma cópia
-//$mail->AddBCC('copiaoculta@dominio.info'); // Define qual conta de email receberá uma cópia oculta
-
-//checa anexos
-if (isset($anexo) && !empty($anexo)):
-  $mail->AddAttachment($anexo['tmp_name'], $anexo['name']); // Anexo
-endif;
-
-// ENVIO DO EMAIL
-$enviado = $mail->Send();
-// Limpa os destinatários e os anexos
-$mail->ClearAllRecipients();
-// Exibe uma mensagem de resultado do envio (sucesso/erro)
-if($enviado):
-  
-  //cria mensagem
-  $message = array(
-    'title'   => 'Deu certo!',
-    'desc'    => 'Seu contato foi enviado com sucesso. Em breve entraremos em contato ', 
-    'response'  => 'success'
-  );
-
-else:
-
-  //cria mensagem
-  $message = array(
-    'title'   => 'Algo deu errado!',
-    'desc'    => 'Infelizmente não foi possível enviar seu contato. Tente novamente mais tarde.', 
-    'response'  => 'error'
-  );
-
-endif;
+echo $Body;

@@ -9,7 +9,7 @@
 
 ?>
 
-<footer>
+<footer class="effect fadeIn">
 	<div class="col-12 p-40">
 		<div class="container">
 			<div class="col-6">
@@ -36,7 +36,8 @@
 				<nav class="menu__footer">
 					<ul>
 						<?php
-						$submenu = false;
+						$footer 	= true;
+						$submenu 	= false;
 						include 'inc/base/menu.inc.php';
 						?>
 					</ul>

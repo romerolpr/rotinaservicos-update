@@ -24,7 +24,7 @@ include 'inc/base/head.php';
 			<?php include('inc/componentes/items.php'); ?>
 		</div>
 		<!-- Contato, forms -->
-		<div class="anchor">
+		<div class="anchor effect fadeIn">
 			<?php include('inc/componentes/contact.php'); ?>
 		</div>
 	</div>

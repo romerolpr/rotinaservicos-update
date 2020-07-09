@@ -13,7 +13,14 @@ include('inc/componentes/vetor/vetKey.php'); //include vetor dos serviços
 $i=0;
 foreach ($vetKey as $num => $vetor):
 	$i++;
-	($i % 2) ? $color = 'c-gray' : $color = 'c-blue';
+
+	if($i % 2):
+		$color = 'c-gray'; 
+
+	else:
+		$color = 'c-blue'; 
+
+	endif;
 
 	$caminho = $url.'images/'.$vetor['cover'];
 

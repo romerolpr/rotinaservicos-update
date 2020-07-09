@@ -27,7 +27,7 @@ onscroll = function(){
         $('header#menu nav > ul li.mobile').addClass('active');
     } else {
         menuli.removeClass('active'); //desativa classe
-        $('header#menu nav > ul li:nth-child(5)').addClass('active');
+        $('header#menu nav > ul li:nth-child(4)').addClass('active');
         $('header#menu nav > ul li.mobile').addClass('active');
     }
 }
@@ -51,12 +51,6 @@ $('.__btn').each(function(){
     $(this).on('click', function(){
         budgetUpdate(''+value+'');
     });
-});
-$('select[name=assunto]').on('change',function(){
-    if($(this).val()=="Solicite seu orçamento"){
-        budgetUpdate('cliente');
-        $(this).val("");
-    }
 });
 //alterar item selecionado
 function budgetUpdate(value){
