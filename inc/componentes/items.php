@@ -21,13 +21,13 @@ foreach ($vetKey as $num => $vetor):
 		$color = 'c-blue'; 
 
 	endif;
-
+	//caminho das imagens
 	$caminho = $url.'images/'.$vetor['cover'];
 
 ?>
 
 	<div class="item">
-		<div class="col-6 picture hide-mobile">
+		<div class="col-6 picture">
 			<img src="<?=$caminho?>.jpg" alt="<?=$vetor['name']?> - <?=$nomeSite?>">
 		</div>
 		<div class="col-6 align <?=$color?>">
@@ -36,7 +36,7 @@ foreach ($vetKey as $num => $vetor):
 					<div class="item__txt">
 						<h2><?=$vetor['name']?></h2>
 						<p><?=$vetor['content']?></p>
-						<a class="__btn" data-budget="cliente" href="<?=$url?>?service=<?=$vetor['cover']?>#contato" title="Contratar serviço de <?=$vetor['name']?>">
+						<a class="__btn goto" data-budget="cliente" href="#contato" title="Contratar serviço de <?=$vetor['name']?>">
 							<span class="btn btn-item">Contratar serviço</span>
 						</a>
 					</div>

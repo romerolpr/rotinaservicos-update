@@ -42,8 +42,8 @@ include 'inc/base/canais.php';
 include 'inc/base/fone.php';
 
 //Whatsapp do site
-$text					= 'Olá, Gostaria de saber mais sobre a'; // mensagem do whatsapp
-$whatsapp 				= array('' . $ddd . '994210145', $text.' '.$nomeSite . ' - ' . $sloganSite, false);
+$text					= 'Olá, Gostaria de Saber Mais Sobre a'; // mensagem do whatsapp
+$whatsapp 				= array('' . $ddd . '994210145', $text.' '.$nomeSite . ' - ' . $sloganSite, true);
 
 //esconde erros
 error_reporting(0);

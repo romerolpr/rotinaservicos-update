@@ -13,20 +13,18 @@ include 'inc/base/head.php';
 	<!-- SLIDER -->
 	<?php include('inc/componentes/slider.php'); ?>
 	<!-- conteudo -->
-	<div class="content">
-		<div class="anchor">
-			<?php 
-			include('inc/componentes/about.php'); 
-			include('inc/componentes/invite.php'); 
-			?>
-		</div>
-		<div class="anchor">	
-			<?php include('inc/componentes/items.php'); ?>
-		</div>
-		<!-- Contato, forms -->
-		<div class="anchor effect fadeIn">
-			<?php include('inc/componentes/contact.php'); ?>
-		</div>
+	<div class="anchor">
+		<?php 
+		include('inc/componentes/about.php'); 
+		include('inc/componentes/invite.php'); 
+		?>
+	</div>
+	<div class="anchor">	
+		<?php include('inc/componentes/items.php'); ?>
+	</div>
+	<!-- Contato, forms -->
+	<div class="effect fadeIn">
+		<?php include('inc/componentes/contact.php'); ?>
 	</div>
 	<!-- Footer, rodapé -->
 	<?php 

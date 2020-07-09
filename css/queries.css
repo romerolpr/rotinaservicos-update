@@ -27,6 +27,9 @@
 	[class*="col-"] {
 		width: 100%;
 	}
+	.item > .align {
+		min-height: 200px;
+	}
 }
 /* Celulares */
 @media (max-width: 480px){
@@ -45,5 +48,14 @@
 	}
 	.show-sm-mobile {
 		display: block;
+	}
+	.hide-sm-mobile {
+		display: none;
+	}
+	.item .picture {
+		height: 240px;
+	}
+	.item__txt h2 {
+		margin: 0;
 	}
 }
