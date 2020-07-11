@@ -43,8 +43,8 @@
 	.icon-whatsapp img {
 		max-width: 50px;
 	}
-	.tmobile {
-		font-size: 1em!important;
+	.txtslider .title h1 {
+		font-size: 3.5em;
 	}
 	.show-sm-mobile {
 		display: block;
@@ -57,5 +57,25 @@
 	}
 	.item__txt h2 {
 		margin: 0;
+		font-size: 2.25em;
+	}
+	.item__txt {
+		padding: 1em 0;
+	}
+	.item, .item > .align {
+		min-height: auto;
+	}
+	.slider,
+	.img,
+	.center__slider,
+	.moldura,
+	.filter {
+		height: calc(100vh - 83px);
+	}
+}
+/* Celulares, correcoes */
+@media (max-width: 340px) {
+	.txtslider .title h1 {
+		font-size: 3em;
 	}
 }

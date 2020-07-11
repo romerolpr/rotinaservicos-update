@@ -62,7 +62,7 @@
 		<div class="arrow"></div>
 		<div class="container">
 			<div class="col-6">
-				<p>© 2020 Romero Service LTDA. Todos os direitos reservados.</p>
+				<p>© 2020 Romero Service Ltda. Todos os direitos reservados.</p>
 			</div>
 			<div class="col-6 hide-mobile">
 				<div class="fright">

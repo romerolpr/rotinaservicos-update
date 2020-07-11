@@ -95,6 +95,7 @@ ul.list > li {
 	background: none;
 	margin: 1em 0;
 	font-size: 2em; 
+	color: #294564;
 }
 .menu-mobile ul li {
 	list-style: none;
@@ -217,21 +218,17 @@ header#menu .logo a {
 }
 .navtop a { text-decoration: none; color: inherit;}
 .navtop span{
-	font-size: .75em;
+	font-size: .9em;
 	color: #444;
-	padding: 0 3px;
-}
-.navtop div > div {
-	padding: 0 12px;
+	padding: 0 .2em;
 }
 .navtop i {
-	padding: 0 3px;
+	padding: 0 .2em;
 }
 /*Estilização do slider*/
 .slider {
 	float: left;
 	position: relative;
-	z-index: -9;
 	/*config tamanho*/
 	width: 100%;
 }
@@ -248,7 +245,7 @@ header#menu .logo a {
 }
 .txtslider 
 .title h1 {
-	font-size: 3.5em!important;
+	font-size: 3.5em;
 	margin: 1.25em 0;
 }
 .txtslider 
@@ -266,7 +263,6 @@ header#menu .logo a {
 	/*position: fixed;*/
 	overflow: hidden;
 	width: 100%;
-	height: 500px;
 	background: #f8f8f8;
 	z-index: -9;
 	display: flex;
@@ -275,7 +271,6 @@ header#menu .logo a {
 .slider .moldura .filter {
 	position: absolute;
 	width: 100%;
-	height: 500px;
 	background: rgba(255,255,255,0.5);
 }
 .slider .moldura > img { 
@@ -289,7 +284,7 @@ header#menu .logo a {
 }
 .slider .center__slider h1 {
 	margin: .25em 0;
-	font-size: 1.75em;
+	/*font-size: 1.75em;*/
 }
 .slider .center__slider p { 
 	font-size: 1em;
@@ -307,7 +302,9 @@ header#menu .logo a {
 }
 .slider,
 .img,
-.center__slider {
+.center__slider,
+.moldura,
+.filter {
 	height: 500px;
 }
 /*Classe padrão botao*/
@@ -760,3 +757,8 @@ span.hover_youtube:hover {
 	background-color: #ff0000; }
 span.hover_tumblr:hover { 
 	background-color: #001935; }
+.fix{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}

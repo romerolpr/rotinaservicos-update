@@ -36,7 +36,6 @@ session_start();
 	include('css/effects.css');
 	include('css/base.css');
 	include('css/queries.css');
-	include('css/fontawesome/all.css');
 	include('inc/mail/css/message-alert.css');
 	include('css/fontawesome.css');
 

@@ -1,7 +1,7 @@
 <div class="col-12">
 	<div class="container">
 		<h2 class="tcenter">Selecione um formulário para contato</h2>
-		<p class="tcenter">Tem dúvidas ou necessita fazer orçamento para seu condomínio? Então escolha o formulário de sua preferência.</p>
+		<p class="tcenter">Necessita fazer orçamento para seu condomínio ou empresa? Então escolha o formulário de sua preferência.</p>
 		<div class="clearfix"></div>
 		<div class="col-12">
 			<div class="items">

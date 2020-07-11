@@ -23,7 +23,7 @@ include 'inc/base/head.php';
 		<?php include('inc/componentes/items.php'); ?>
 	</div>
 	<!-- Contato, forms -->
-	<div class="effect fadeIn">
+	<div class="effect fadeIn fix">
 		<?php include('inc/componentes/contact.php'); ?>
 	</div>
 	<!-- Footer, rodapé -->

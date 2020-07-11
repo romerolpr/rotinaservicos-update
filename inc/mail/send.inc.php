@@ -35,36 +35,36 @@ $Body = "
 <thead style='display: contents;float: left;margin-bottom: 10px;'>
 <tr>
 <td style='text-align:center;font-family:Arial,sans-serif;font-size:9px;padding:1em .5em;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#7a7;color:#333;background-color:#fff;border-top-width:1px;border-bottom-width:1px;text-align:center;vertical-align:top' colspan='2'>
-Mensagem recebida de {$nome} às {$today} via formulário do site
+Mensagem recebida de {$nome} em {$today} via formulário do site
 </td>
 </tr>
 <tr>
-<th colspan='2' style='font-weight: bold;padding-left: .5em;'>
+<th colspan='2' style='font-weight: bold;'>
 <a href='https://www.rotinaservicos.com/' width='150' title='rotinaservicos' alt='rotinaservicos'>
-<img src='https://www.rotinaservicos.com/images/logo.png' width='100' title='rotinaservicos' alt='rotinaservicos' style='margin: 20px 0'>
+<img src='https://www.rotinaservicos.com/images/logo.png' width='130' title='rotinaservicos' alt='rotinaservicos' style='margin: 20px 0'>
 </a>
 </th>
 </tr>
 <tr>
-<td style='text-align:left;padding-right: .5em;padding:.5em .5em .5em 3em;width: 65%;'>
+<td style='text-align:left;padding:.5em 2em;width: 40%;'>
 <font size='-1'><b>{$nomeSite} </b>&lt;rotina.servicos@gmail.com&gt;</font>
 </td>
-<td align='right' style='text-align:left;padding-right: .5em;padding:.5em .5em .5em 0;width: 35%;'>
+<td align='right' style='text-align:left;padding: .5em 2em;width: 60%;'>
 <font size='-1'>{$today}</font>
 </td>
 </tr>
 <tr>
-<td colspan='2' style='text-align:left;padding-right: .5em;padding:.5em .5em .5em 3em;width: 100%;'>
+<td colspan='2' style='text-align:left;padding: .5em 2em;width: 100%;'>
 <font size='-1' class='recipient'>
 <div class='replyto'>Responder a: {$nome} &lt;{$email}&gt;</div><div>Para: {$nome} &lt;{$email}&gt;</div>
 </font>
 </td>
 </tr>
 
-<hr>
+
 <tr>
-<th style='text-align:left;padding: 1em 0 .5em 3em;padding-left:3em;font-weight: bold;'>Campos</th>
-<th style='text-align:left;padding: 1em 3em .5em 0;font-weight: bold;'>Respostas</th>
+<th style='text-align:left;padding: .5em 2em; font-weight: bold;'>Campos</th>
+<th style='text-align:left;padding: .5em 2em; font-weight: bold;'>Respostas</th>
 </tr>
 </thead>
 <tbody>";
@@ -79,8 +79,9 @@ foreach ($input as $key => $value):
   //cria o body
   $Body .= "
     <tr>
-    <th style='text-align:left;padding: .5em 3em;font-weight: normal;'>{$nameInput}:</th>
-    <th style='text-align:left;padding: .5em 3em .5em 0;font-weight: normal;'>{$responseInput}</th>
+    <th style='text-align:left;padding: .5em 2em;font-weight: normal;line-height:1.75em'>{$nameInput}:</th>
+
+    <th style='text-align:left;padding: .5em 2em;font-weight: normal;line-height:1.75em'>{$responseInput}</th>
     </tr>";
 
 endforeach;

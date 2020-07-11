@@ -21,7 +21,7 @@ $mail->IsSMTP(); // Define que a mensagem será SMTP
 $mail->SMTPDebug = false; //debug
 $mail->Host = HOST; // Seu endereço de host SMTP
 $mail->SMTPAuth = true; // Define que será utilizada a autenticação -  Mantenha o valor "true"
-$mail->Port = 587; // Porta de comunicação SMTP - Mantenha o valor "587"
+$mail->Port = PORT; // Porta de comunicação SMTP - Mantenha o valor "587"
 $mail->SMTPSecure = false; // Define se é utilizado SSL/TLS - Mantenha o valor "false"
 $mail->SMTPAutoTLS = false; // Define se, por padrão, será utilizado TLS - Mantenha o valor "false"
 $mail->Username = base64_decode( EMAIL_USER ); // Conta de email existente e ativa em seu domínio

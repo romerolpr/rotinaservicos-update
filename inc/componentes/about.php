@@ -60,11 +60,11 @@
 		<div class="clear"></div>
 		<div class="col-4 effect fadeIn">
 			<h2>O que são serviços terceirizados empresariais</h2>
-			<p class="tjustify">Assim como nosso slogan diz que, <strong>terceirizar é economizar</strong>, a terceirização de serviços nos dias atuais, são indispensáveis para condomínios residenciais, comércios e empresas dos mais diversos segmentos de atuação, a fim de contratar uma empresa especializada no ramo de serviço necessitado. A <strong><?=$nomeSite?></strong> além de fornecer tais serviços, também garante profissionalismo, respeito, e seriedade acima de tudo.</p>
+			<p class="tjustify">Assim como nosso slogan diz, <strong>terceirizar é economizar</strong>, a terceirização de serviços nos dias atuais são indispensáveis para condomínios residenciais e comerciais, bem como comércios e empresas dos mais diversos segmentos de atuação. Precisando contratar uma empresa especializada no ramo de serviço necessitado? A <strong><?=$nomeSite?></strong> além de fornecer tais serviços, também garante economia, profissionalismo, respeito, e seriedade acima de tudo.</p>
 		</div>
 		<div class="col-4 effect fadeIn">
 			<h2>Por que contratar nossos serviços terceirizados</h2>
-			<p class="tjustify">A <strong><?=$nomeSite?></strong> tem como um dos seus maiores princípios e valores o respeito, a dignidade, a excelência e a honestidade para seus clientes e para seus funcionários. Acreditamos que com uma boa relação de lealdade e sinceridade possibilita formar uma consistente parceiria e garantir maior prosperidade para ambos, visto que para nós o cliente também faz parte da nossa empresa.</p>
+			<p class="tjustify">A <strong><?=$nomeSite?></strong> tem como um dos seus maiores princípios e valores o respeito, a dignidade, a excelência e a honestidade junto a seus clientes e a seus colaboradores. Acreditamos que uma boa relação de lealdade e sinceridade possibilitam formar uma consistente parceria, garantindo maior prosperidade para ambos, cliente e colaborador.</p>
 		</div>
 		<div class="col-4 effect fadeIn">
 			<h2>São mais de 20 anos atuando no mercado</h2>

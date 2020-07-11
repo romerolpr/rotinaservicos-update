@@ -6,7 +6,7 @@
 				<div class="center__slider">
 					<div class="col-12 effect Left">	
 						<div class="title">
-							<h1 class="tmobile"><?=$nomeSite?></h1>
+							<h1><?=$nomeSite?></h1>
 							<h3><?=$sloganSite?></h3>
 						</div>
 						<a href="#contato" title="Solicitar orçamento com 5% de desconto" class="link goto opacity1">
