@@ -6,7 +6,7 @@
 			<div class="box center wrap effect Up">
 				<div class="box__pic icon">
 					<div class="box__btxt">
-						<h2><i class="fas fa-bullseye"></i></h2>
+						<span class="f-blue"><i class="fas fa-bullseye"></i></span>
 					</div>
 				</div>
 				<div class="clearfix"></div>
@@ -20,7 +20,7 @@
 			<div class="box center wrap effect Up">
 				<div class="box__pic icon">
 					<div class="box__btxt">
-						<h2><i class="far fa-check"></i></h2>
+						<span class="f-blue"><i class="far fa-check"></i></span>
 					</div>
 				</div>
 				<div class="clearfix"></div>
@@ -34,7 +34,7 @@
 			<div class="box center wrap effect Up">
 				<div class="box__pic icon">
 					<div class="box__btxt">
-						<h2><i class="far fa-handshake"></i></h2>
+						<span class="f-blue"><i class="far fa-handshake"></i></span>
 					</div>
 				</div>
 				<div class="clearfix"></div>

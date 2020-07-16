@@ -18,14 +18,14 @@
 					<?php
 					foreach ($fone as $key => $value):
 						echo '
-							<a href="tel:'.$value[0].$value[1].'" class="tel"><span><i class="fas fa-'.$value[2].'"></i> '.$value[0]. ' ' .$value[1].'</span></a><br>
+							<a href="tel:'.$value[0].$value[1].'" class="tel" title="'.$value[0].$value[1].'"><span><i class="fas fa-'.$value[2].'"></i> '.$value[0]. ' ' .$value[1].'</span></a><br>
 						';
 						if($key >= 2) break;
 					endforeach;
 					?>
 				</p>
 				<p>
-					<a class="mail" href="mailto:<?=$contatoEmail?>" alt="<?=$contatoEmail?>"><i class="fas fa-envelope"></i> <?=$contatoEmail?></a>
+					<a class="mail" href="mailto:<?=$contatoEmail?>" title="<?=$contatoEmail?>"><i class="fas fa-envelope"></i> <?=$contatoEmail?></a>
 				</p>
 				<p>
 					<i class="fas fa-map-marker-alt"></i> <?=$contatoAddress.', '.$bairro?>, <?= ' Cep '.$contatoCep.', '.$cidade.' - '.$UF; ?>

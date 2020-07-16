@@ -7,7 +7,7 @@
 			<div class="items">
 				<div class="box budget center wrap" id="cliente">
 					<div class="icon align center">
-						<a href="#contato" title="Formulário de orçamento" class="goto __btn" data-budget="cliente"><h2><i class="far fa-handshake"></i></h2></a>
+						<a href="#contato" title="Formulário de orçamento" class="goto __btn" data-budget="cliente"><span class="m-h2"><i class="far fa-handshake"></i></span></a>
 					</div>
 					<div class="box__txt">
 						<h3>Solicite seu orçamento</h3>
@@ -16,7 +16,7 @@
 				</div>
 				<div class="box budget center wrap selected" id="colaborador">
 					<div class="icon align center">
-						<a href="#contato" title="Formulário para colaboradores" class="goto __btn" data-budget="colaborador"><h2><i class="far fa-user"></i></h2></a>
+						<a href="#contato" title="Formulário para colaboradores" class="goto __btn" data-budget="colaborador"><span class="m-h2"><i class="far fa-user"></i></span></a>
 					</div>
 					<div class="box__txt">
 						<h3>Trabalhe conosco</h3>
@@ -31,7 +31,13 @@
 <div class="col-12 c-gray fleft" id="contato">
 	<div class="container">
 		<div class="col-12 p-0">
-			<div class="col-7 box__form" data-budget="colaborador">
+			<div class="p-0 col-12 show-sm-mobile">
+				<div class="ad__box">
+					<p>Aproveite!</p>
+					<a href="#contato" class="__btn link goto" data-budget="cliente" title="Solicite seu orçamento"><h2>Solicite seu orçamento e ganhe 5% de desconto!</h2></a>
+				</div>
+			</div>	
+			<div class="col-7 box__form pt-0" data-budget="colaborador">
 				<div class="load" style="display: none;"><span></span></div>
 				<?php
 				//post
@@ -40,10 +46,10 @@
 				include 'inc/componentes/contato.inc.php'; 
 				?>
 			</div>
-			<div class="col-5">
+			<div class="col-5 pt-0">
 				<div class="contato">
 
-					<div class="ad__box">
+					<div class="ad__box hide-sm-mobile">
 						<p>Aproveite!</p>
 						<a href="#contato" class="__btn link goto" data-budget="cliente" title="Solicite seu orçamento"><h2>Solicite seu orçamento e ganhe 5% de desconto!</h2></a>
 					</div>
@@ -58,14 +64,14 @@
 						</span>
 						<br>
 						<span>
-							<a href="mailto:<?=$contatoEmail?>" alt="<?=$contatoEmail?>"><i class="fas fa-envelope"></i> <?=$contatoEmail?></a>
+							<a href="mailto:<?=$contatoEmail?>" title="<?=$contatoEmail?>"><i class="fas fa-envelope"></i> <?=$contatoEmail?></a>
 						</span>
 						<br>
 						<span>
 							<?php
 							foreach ($fone as $key => $value):
 								echo '
-									<a href="tel:'.$value[0].$value[1].'"><span><i class="fas fa-'.$value[2].'-alt"></i> '.$value[0]. ' ' .$value[1].'</span></a>
+									<a href="tel:'.$value[0].$value[1].'" title="'.$value[0].$value[1].'"><span><i class="fas fa-'.$value[2].'"></i> '.$value[0]. ' ' .$value[1].'</span></a><br>
 								';
 								if($key >= 2) break;
 							endforeach;

@@ -1,1 +1,180 @@
-/*body {font-size: 16px;}/* col */[class*="col-"] {float: left;padding: .93em;box-sizing: border-box;}.col-1 {width: 8.33%;}.col-2 {width: 16.66%;}.col-3 {width: 25%;}.col-4 {width: 33.33%;}.col-5 {width: 41.66%;}.col-6 {width: 50%;}.col-7 {width: 58.33%;}.col-8 {width: 66.66%;}.col-9 {width: 75%;}.col-10 {width: 83.33%;}.col-11 {width: 91.66%;}.col-12 {width: 100%;}/* end col / Classes atalhos / centralizar*/.center {display: flex;justify-content: center;}.wrap {flex-wrap: wrap;}/*Quebra linha*/.clearfix {clear: both;}/*flutuadores*/.fleft {float: left;}.fright {float: right;}/*Textos*//*Dia-dia*/.tcenter {text-align: center;}.tjustify {text-align: justify;}.tleft {text-align: left;}.tright {text-align: right;}/*Específicos*/.ftitle {font-size: 1.75em} /*28px*/.space-around {display: flex;justify-content: space-around;}.space-between {display: flex;justify-content: space-between;}/*container*/.container {max-width: 1100px;margin: 0 auto;}.align {display: flex;align-items: center;height: 100%;}.p-0 {padding: 0}.m-0 {margin: 0}.p-40 {padding: 2.5em 0}
+/*body {font-size: 16px;}/* col */
+
+[class*="col-"] {
+	float: left;
+	padding: .93em;
+	box-sizing: border-box;
+}
+
+.col-1 {
+	width: 8.33%;
+}
+
+.col-2 {
+	width: 16.66%;
+}
+
+.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33.33%;
+}
+
+.col-5 {
+	width: 41.66%;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+.col-7 {
+	width: 58.33%;
+}
+
+.col-8 {
+	width: 66.66%;
+}
+
+.col-9 {
+	width: 75%;
+}
+
+.col-10 {
+	width: 83.33%;
+}
+
+.col-11 {
+	width: 91.66%;
+}
+
+.col-12 {
+	width: 100%;
+}
+
+
+/* end col / Classes atalhos / centralizar*/
+
+.center {
+	display: flex;
+	justify-content: center;
+}
+
+.wrap {
+	flex-wrap: wrap;
+}
+
+
+/*Quebra linha*/
+
+.clearfix {
+	clear: both;
+}
+
+
+/*flutuadores*/
+
+.fleft {
+	float: left;
+}
+
+.fright {
+	float: right;
+}
+
+
+/*Textos*/
+
+
+/*Dia-dia*/
+
+.tcenter {
+	text-align: center;
+}
+
+.tjustify {
+	text-align: justify;
+}
+
+.tleft {
+	text-align: left;
+}
+
+.tright {
+	text-align: right;
+}
+
+
+/*Específicos*/
+
+.ftitle {
+	font-size: 1.75em
+}
+
+
+/*28px*/
+
+.space-around {
+	display: flex;
+	justify-content: space-around;
+}
+
+.space-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+/*container*/
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.align {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.p-0 {
+	padding: 0;
+}
+.pb-0 {
+	padding-bottom: 0;
+}
+.pt-0 {
+	padding-top: 0;
+}
+.pl-0 {
+	padding-left: 0;
+}
+.pr-0 {
+	padding-right: 0;
+}
+.pt-3 {
+	padding-top: 1em;
+}
+
+.m-0 {
+	margin: 0;
+}
+.mb-0 {
+	margin-bottom: 0;
+}
+.mt-0 {
+	margin-top: 0;
+}
+.ml-0 {
+	margin-left: 0;
+}
+.mr-0 {
+	margin-right: 0;
+}
+
+.p-40 {
+	padding: 2.5em 0
+}

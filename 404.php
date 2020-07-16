@@ -12,10 +12,8 @@ include 'inc/base/head.php';
 	<!-- SLIDER -->
 	<?php include('inc/componentes/slider.php'); ?>
 	<!-- conteudo -->
-	<div class="content">
-		<div class="anchor">
-			<?php include('inc/componentes/notfound.php'); ?>
-		</div>
+	<div class="container">
+		<?php include('inc/componentes/notfound.php'); ?>
 	</div>
 	<!-- Footer, rodapé -->
 	<?php 

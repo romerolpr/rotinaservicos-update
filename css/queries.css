@@ -1,4 +1,6 @@
+.show-mobile {display: none;}
 .show-sm-mobile {display: none;}
+.slider .moldura .img {background-image: url(<?=$url?>images/rotinaservicos-01-old.jpg);}
 /* A partir de desktop pequeno */
 @media (max-width: 1250px){
 	/* tamanho dos textos do site */
@@ -30,15 +32,36 @@
 	.item > .align {
 		min-height: 200px;
 	}
-}
-/* Celulares */
-@media (max-width: 480px){
-	/* tamanho dos textos do site */
-	html, body {
-		font-size: 13px;
+	.topo {
+		float: left;
+		width: 100%;
+		box-shadow: 0 -5px 10px 0px rgba(0,0,0,0.02);
 	}
-	/* correcao slider */
-	/*remocao de margin específica*/
+	.slider .moldura .img {
+		/*background-image: url(<?=$url?>images/rotinaservicos-02.jpg);*/
+	}
+	.article, .aside {
+		width: 100%;
+	}
+}
+/* Tablets pequenos */
+@media (max-width: 767px){
+	.aviso-popup p {
+		width: 100%;
+		text-align: center;
+	}
+	.aviso-popup span.btn {
+		margin: 1em .5em;
+	}
+	.aviso-popup p {
+		margin: 1em 1em 0 0;
+	}
+	.md-center {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin: 0 0 .5em 0;
+	}
 	.item > .col-6:nth-child(2) { padding: .93em;  }
 	.icon-whatsapp img {
 		max-width: 50px;
@@ -65,12 +88,37 @@
 	.item, .item > .align {
 		min-height: auto;
 	}
+	.slider .moldura .img {
+		/*background-image: url(<?=$url?>images/rotinaservicos-03.jpg);*/
+	}
+}
+/* Celulares */
+@media (max-width: 480px){
+	/* tamanho dos textos do site */
+	html, body {
+		font-size: 13px;
+	}
 	.slider,
 	.img,
 	.center__slider,
 	.moldura,
 	.filter {
 		height: calc(100vh - 83px);
+	}
+	.aviso-popup span.btn {
+		margin: 1em;
+	}
+	.sm-center {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin: 0 0 .5em 0;
+	}
+	.slider .moldura .filter {
+		background: rgba(255,255,255,0.8);
+	}
+	.slider .moldura .img {
+		/*background-image: url(<?=$url?>images/rotinaservicos-04.jpg);*/
 	}
 }
 /* Celulares, correcoes */

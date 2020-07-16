@@ -15,19 +15,12 @@ session_start();
 ?>
 
 <!-- JS -->
-<script>
-
-	<?php 
-
-	include('js/jquery.js');
-	include('js/maskinput.js');
-
-	?>
-		
-</script>
+<script><?php include('js/jquery.js'); ?></script>
 
 <!-- CSS -->
 <style>
+
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
 
 	<?php
 
@@ -42,8 +35,6 @@ session_start();
 	?>
 
 </style>
-
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <meta name="description" content="<?=ucfirst($desc)?>">
 <meta name="keywords" content="<?=str_replace($prepos,', ', $h1).', '.$nomeSite?>">
@@ -67,25 +58,4 @@ session_start();
 
 <title><?=$title.' - '.$nomeSite?></title>
 
-<script>
-	$(document).ready(function(){
-		var i = 0;
-		$('.s-mobile').on('click', function(){
-			i++;
-			if(i > 0 && i == 1){
-				$('.nav-mobile').show();
-				$('.nav-mobile').removeClass('hideDownMenu')
-				$('.nav-mobile').addClass('showUpMenu');
-			} else if(i > 1 && i == 2){
-				$('.nav-mobile').removeClass('showUpMenu');
-				$('.nav-mobile').addClass('hideDownMenu');
-				$('.s-mobile').attr('disabled','disabled');
-				setTimeout(function(){
-					$('.nav-mobile').hide();
-					$('.s-mobile').removeAttr('disabled');
-				},800)
-				i=0;
-			}
-		});
-	});
-</script>
+<script><?php include('js/header.js'); ?></script>

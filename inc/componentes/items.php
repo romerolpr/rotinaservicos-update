@@ -8,7 +8,7 @@
 	
 <?php
 
-include('inc/componentes/vetor/vetKey.php'); //include vetor dos serviços
+include('inc/componentes/vetor/servico.vet.php'); //include vetor dos serviços
 //color
 $i=0;
 foreach ($vetKey as $num => $vetor):
