@@ -12,12 +12,10 @@
     ServerSignature Off
     Options All -Indexes
 
-    # TIRAR EXTENSAO .HTML
-    DirectoryIndex index.php
-    RewriteEngine on
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME}\.php -f
-    RewriteRule ^(.*)$ $1.php
+    RewriteEngine On
+    RewriteCond %{SCRIPT_FILENAME} !-f
+    RewriteCond %{SCRIPT_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?page=$1
 
     # CONFIGURAR UTILIZAÇÃO DO HTTPS
 
@@ -30,32 +28,26 @@
     <IfModule mod_rewrite.c>
 
       RewriteEngine On
-      #RewriteCond %{HTTPS} !=on
-      #RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+      RewriteCond %{HTTPS} !=on
+      RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
         RewriteCond %{http_host} ^HTACCESS [NC]
+        RewriteRule ^(.*)$ http://www.rotinaservicos.com/$1 [r=301,NC]
+        RewriteRule ^index.php$ http://www.rotinaservicos.com/ [r=301,NC,L]
 
-        RewriteRule ^(.*)$ RAIZ$1 [r=301,NC]
-
-        RewriteRule ^index.php$ RAIZ [r=301,NC,L]
-
-
-
-        RewriteCond %{REQUEST_FILENAME} !-d
-
-        RewriteCond %{REQUEST_FILENAME}.php -f
-
-        RewriteRule ^(.*)$ $1.php
+        RewriteEngine On
+        RewriteCond %{SCRIPT_FILENAME} !-f
+        RewriteCond %{SCRIPT_FILENAME} !-d
+        RewriteRule ^(.*)$ index.php?page=$1
 
 
+    </IfModule>
 
-        #redirects 
+    # Impede de navegar em pastas sem um documento padrão (index) e exibe Erro 403 - permissão negada
 
-        #redirect 301 /produto RAIZprodutos
-        
-        #RewriteCond %{REQUEST_URI} ^(.*)colar_link_antigo(.*)$
-        #RewriteRule ^(.*) novo_dominio [L,R=301,QSD]
+    <IfModule mod_autoindex.c>
 
+        Options -Indexes
 
     </IfModule>
 
@@ -79,14 +71,6 @@
 
     RewriteCond %{REQUEST_URI} ^/500/$
     RewriteRule ^(.*)$ /404 [L]
-
-    # Impede de navegar em pastas sem um documento padrão (index) e exibe Erro 403 - permissão negada
-
-    <IfModule mod_autoindex.c>
-
-        Options -Indexes
-
-    </IfModule>
 
     # Fazendo cache de recursos com Expires HTTP
     <IfModule mod_expires.c>
@@ -132,3 +116,5 @@
       ExpiresByType application/javascript "access plus 1 month"
       ExpiresByType text/javascript "access plus 1 month"
     </IfModule>
+
+    

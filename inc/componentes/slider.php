@@ -12,9 +12,16 @@
 						?>
 						
 						<div class="title">
-							<?php include('inc/componentes/breadcrumb.php'); ?>
 							<h1><?=$title?></h1>
-							<h3>por <?=$autor?> </h3>
+							<h3>
+								<?php 
+								if($autor): 
+									echo 'por ' . $autor; 
+								else:
+									echo $nomeSite;
+								endif;
+								?>
+							</h3>
 						</div>
 
 						<?php

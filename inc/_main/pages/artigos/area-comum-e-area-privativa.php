@@ -1,12 +1,10 @@
 <?php 
-$parent 	= 'Blog';
-$autor		= 'Bruno Romero';
 $title		= 'O que é área comum e o que é área privativa?';
 $desc       = ''.$title.' - fundada em 1997 e desde então atua nas áreas de portaria e controle de acesso, limpeza, zeladoria e conservação de condomínios residenciais, comércios e empresas em geral.';
 $key        = ''.$title.', terceirizados, servicos, servicos prediais, predios, ap, casa, condominio';
 $var        = ''.$title.',Inicio';
 include 'inc/base/head.php';
-
+$autor	= 'Bruno Romero';
 ?>
 </head>
 <body>
@@ -22,15 +20,17 @@ include 'inc/base/head.php';
 
 			<div class="container">
 				
-				<article class="article">
+				<article class="article-full">
 
-
-					<p>Publicado em 11 de Ago de 2016</p>
+					<?php include('inc/componentes/breadcrumb.php'); ?>
 
 					<h2><?=$title?></h2>
 
 					<?php include('inc/componentes/share-on.php'); ?>
 
+					<p>Publicado em 11 de Ago de 2016</p>
+
+					<?php include('inc/componentes/thumb.php') ?>
 
 					<p>Nossa primeira postagem tratará sobre um tema que pode gerar certa confusão em condôminos, em especial àqueles que tenham menos familiaridade com os termos utilizados em incorporações imobiliárias.</p>
 
@@ -44,19 +44,9 @@ include 'inc/base/head.php';
 
 					<p>A área total de cada unidade corresponderá à soma da área privativa mais a fração ideal de cada unidade, ou seja, uma fração decimal de toda a área comum do condomínio que pertence a cada unidade. Nosso próximo post tratará especificamente sobre o que é a fração ideal em e suas implicações.</p>
 
-					<br class="clearfix">
-					<div class="tags">
-						<span>#rotinaservicos</span>
-						<span>#terceirizareeconomizar</span>
-						<span>#areacomum</span>
-						<span>#areaprivativa</span>
-						<span>#brunoromero</span>
-					</div>
-					<br class="clearfix">
+					<br class="clearfix">				
 
-					
-
-					<?php include('inc/componentes/related.php'); ?>
+					<?php include('inc/componentes/related.blog.php'); ?>
 
 				</article>
 

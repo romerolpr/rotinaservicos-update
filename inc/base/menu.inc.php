@@ -3,7 +3,12 @@
 if(isset($menu)&&!empty($menu)):
 	foreach ($menu as $key => $value):
 
-		if(!empty($urlPagina)) $href = $url.$value[0]; $value[3] = 'null';
+		if(!empty($urlPagina)):
+			$href = $url.$value[0]; 
+			$value[3] = 'null';
+		else:
+			$href = $value[0];
+		endif;
 
 		($value[5]) ? $classBudget = array('__btn', 'data-budget="'.$value[5].'"') : $classBudget = false;
 

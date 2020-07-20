@@ -1,4 +1,4 @@
-<a href="javascript:;" class="__btn link" data-budget="colaborador" title="Solicite seu orçamento"><h3 class="primary">Voltar</h3></a>
+<a href="javascript:;" class="__btn link" data-budget="colaborador" title="Ir para sessão de candidatos"><h3 class="primary">Ir para sessão de candidatos</h3></a>
 <h2>Solicite seu orçamento</h2>
 <p>Preencha os dados abaixo para que possamos entrar em contato de forma mais objetiva.</p>
 

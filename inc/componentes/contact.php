@@ -5,7 +5,7 @@
 		<div class="clearfix"></div>
 		<div class="col-12">
 			<div class="items">
-				<div class="box budget center wrap" id="cliente">
+				<div class="box budget center wrap selected" id="cliente">
 					<div class="icon align center">
 						<a href="#contato" title="Formulário de orçamento" class="goto __btn" data-budget="cliente"><span class="m-h2"><i class="far fa-handshake"></i></span></a>
 					</div>
@@ -14,7 +14,7 @@
 						<a href="#contato" title="Formulário de orçamento" class="goto __btn" data-budget="cliente"><p>Preencha um formulário específico para <strong>clientes</strong>.</p></a>
 					</div>
 				</div>
-				<div class="box budget center wrap selected" id="colaborador">
+				<div class="box budget center wrap" id="colaborador">
 					<div class="icon align center">
 						<a href="#contato" title="Formulário para colaboradores" class="goto __btn" data-budget="colaborador"><span class="m-h2"><i class="far fa-user"></i></span></a>
 					</div>

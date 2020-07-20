@@ -36,9 +36,8 @@
 			<div class="logo fleft">
 				<a href="<?=$url?>" title="<?=$nomeSite?>">
 					<img src="<?=$url?>images/logo.png" alt="Logo - <?=$nomeSite?>" title="Logo - <?=$nomeSite?>" width="50" class="fleft">
-
-					<a href="tel:<?=$fone[0][0].$fone[0][1]?>" title="Clique para ligar"><span class="fone-logo">(<?=$fone[0][0]. ') ' .$fone[0][1]?></span></a>
 				</a>
+				<a href="tel:<?=$fone[0][0].$fone[0][1]?>" title="Clique para ligar"><span class="fone-logo">(<?=$fone[0][0]. ') ' .$fone[0][1]?></span></a>
 			</div>
 			<nav class="fright hide-mobile">
 				<ul>

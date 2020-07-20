@@ -227,7 +227,7 @@ header#menu .logo a {
 /*Estilização menu navtop*/
 .navtop {
 	width: 100%;
-	padding: 7px 0;
+	padding: .7em 0;
 	float: left;
 	background: #f5f5f5;
 }
@@ -256,7 +256,7 @@ header#menu .logo a {
 }
 .txtslider .title {
 	text-align: left;
-	margin: 0 0 20px 0;
+	margin: 0 0 1.25em 0;
 }
 .txtslider 
 .title h1 {
@@ -812,9 +812,8 @@ span.hover_tumblr:hover {
 /*estilo da breadcrumb*/
 .breadcrumb {
 	box-sizing: border-box;
-	padding-left: .3em;
 	width: 100%;
-	margin: .5em 0;
+	margin: .5em 0 1.5em 0;
 }
 .breadcrumb a {
 	color: inherit;
@@ -825,26 +824,29 @@ span.hover_tumblr:hover {
 	background: #fff;
 	border-radius: 0 5px 5px 0;
 	font-size: .8em;
-	box-shadow: 2px 2px 10px rgba(0,0,0,.05);
+	box-shadow: 2px 2px 10px rgba(0,0,0,.08);
 	color: #222;
 }
 /*blog*/
 .section {
 	width: 100%;
 }
+.article-full {
+	width: 100%;
+}
 .article {
 	width: 75%;
 }
-.article p {
+article p {
 	text-align: justify;
 }
-.article h2 {
+article h2 {
 	margin: 0;
 }
 .aside {
 	width: 25%;
 }
-.article,
+article,
 .aside {
 	float: left;
 	box-sizing: border-box;
@@ -862,7 +864,6 @@ span.hover_tumblr:hover {
 	display: block;
 	width: 50px;
 	height: 50px;
-	line-height: 50px;
 	background: #fff;
 	color: #222;
 	margin: 0 .3em;
@@ -871,6 +872,9 @@ span.hover_tumblr:hover {
 	box-shadow: 2px 2px 10px rgba(0,0,0,.1);
 	transition: all .3s ease;
 	opacity: .9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 } .share-on span:first-of-type { margin: 0; margin-right: .3em; }
 .share-on .share-btn {
 	background: transparent!important;

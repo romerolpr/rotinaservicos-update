@@ -4,7 +4,7 @@
 $host = $_SERVER['HTTP_HOST'];
 
 ## variável para desligar a verificação do recaptcha, se "true" habilita o recaptcha para testes
-$switch = true;
+$switch = false;
 
 date_default_timezone_set('America/Sao_Paulo');
 

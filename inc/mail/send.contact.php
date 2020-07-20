@@ -2,7 +2,8 @@
 
 //configuracoes de envio
 include("config.send.php");
-
+//incluindo a url
+include("../base/root/url.inc.php");
 //include a geral
 include("../base/root/geral.php");
 
