@@ -7,7 +7,7 @@
 					<div class="col-12 effect Left">
 						<?php
 
-						if(!empty($urlPagina)):
+						if(isset($URL) && !empty($URL[0]) && $URL[0] != 'home'):
 
 						?>
 						
@@ -15,8 +15,8 @@
 							<h1><?=$title?></h1>
 							<h3>
 								<?php 
-								if($autor): 
-									echo 'por ' . $autor; 
+								if($var['autor']): 
+									echo 'por ' . $var['autor']; 
 								else:
 									echo $nomeSite;
 								endif;
@@ -31,7 +31,7 @@
 						<div class="title">
 							<h1>
 								<?php
-								if(!empty($urlPagina)):
+								if(isset($URL) && !empty($URL[0]) && $URL[0] != 'home'):
 									echo $title;
 								else:
 									echo $nomeSite;
@@ -45,6 +45,7 @@
 						</a>
 
 						<?php
+
 						endif;
 						?>	
 					</div>

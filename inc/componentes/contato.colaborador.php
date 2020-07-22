@@ -1,4 +1,4 @@
-<a href="javascript:;" class="__btn link" data-budget="cliente" title="Voltar"><h3 class="primary">Voltar</h3></a>
+<a href="javascript:;" class="__btn link" data-budget="cliente" title="Solicitar orçamento"><h3 class="primary">Solicitar orçamento</h3></a>
 <h2>Formulário para contato</h2>
 <p>Envie seu contato e em breve entraremos em contato.</p>
 
@@ -43,6 +43,11 @@
 				} else {
 					$('blockquote').addClass('hide');
 					$('.new-input').remove();
+				}
+
+				if($(this).val()=="Curriculo"){
+				  	<?php include('inc/mail/js/message-alert.js'); ?>
+				  	messageAlert('Sem vagas!', 'Infelizmente não estamos com vagas disponíveis no momento. Os currículos recebidos estão sendo organizados por ordem crescente.', 'warning');
 				}
 			});
 		});

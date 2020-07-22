@@ -47,10 +47,11 @@
 				<p>Últimos artigos</p>
 				<nav class="menu__footer">
 					<ul>
-						<li><a href="<?=$canais[2][0]?>post/151765904557/obras-em-condominios" rel="nofollow" target="_blank" title="Obras em condomínios">Obras em condomínios</a></li>
-						<li><a href="<?=$canais[2][0]?>post/150122406197/seguro-condominial" rel="nofollow" target="_blank" title="Seguro condominal">Seguro condominal</a></li>
-						<li><a href="<?=$canais[2][0]?>post/149326863687/fracoes-ideais-condominios" rel="nofollow" target="_blank" title="Frações ideais em condomínios">Frações ideais em condomínios</a></li>
-						<li><a href="<?=$canais[2][0]?>post/148810893322/o-que-e-area-comum-area-privativa" rel="nofollow" target="_blank" title="O que é área comum e área privativa?">O que é área comum e área privativa?</a></li>
+						<?php
+						foreach ($vetBlog as $key => $value): 
+						?>
+						<li><a href="<?=$url?>artigos/<?=$value['url']?>" title="<?=$value['name']?>"><?=$value['name']?></a></li>
+						<?php if ($key > 4) break; endforeach; ?>
 					</ul>
 				</nav>
 			</div>

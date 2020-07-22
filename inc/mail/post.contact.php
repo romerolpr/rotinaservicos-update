@@ -11,7 +11,6 @@ if(isset($input['sendForm']) && !empty($input['sendForm'])):
 	?>
 
 	<script>
-	scrollHidden = 'scroll-hidden';
 	<?php 
 	//inclui o javascript pro message
 	include('inc/mail/js/message-alert.js'); 

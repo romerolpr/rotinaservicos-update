@@ -2,6 +2,14 @@
 //inclui classe pra URL amigável
 require_once 'inc/Link.class.php';
 
+//resgata a url
+if(!isset($_GET['page'])):
+    $_GET['page'] = 'home';
+endif;
+
+$URL = $_GET['page'];
+$URL = array_filter(explode('/', $URL));
+
 //URL cut
 $urlPagina = end($Name);
 $urlpagina = str_replace('.php','',$urlPagina);
@@ -11,6 +19,9 @@ define('REQ', 'inc/_main/');
 //cria objeto link
 $link = new Link();
 
+//vet para o blog
+include 'inc/_vetor/blog.vet.php';
+
 //faz a condicao e inclui paginas
 if($link->Path != null):
 	require(REQ . 'pages' . '/' . $link->Path . '/' . $link->File . '.php');
@@ -18,7 +29,7 @@ else:
 	require(REQ . 'pages' . '/' . $link->File . '.php');
 endif;
 
-//htaccess
+//gerar htaccess
 $urlhtaccess = $url;
 $schemaReplace = strpos($urlhtaccess, 'https://www.') === false ? 'https://' : 'https://www.';
 $urlhtaccess = str_replace($schemaReplace, '', $urlhtaccess);
@@ -28,123 +39,119 @@ if (!file_exists('.htaccess')):
 
     $HTACCESS = HTACCESS;
 
-    $htaccesswrite = "
+    $htaccesswrite = '
 
-    # PRIVAR ARQUIVO
-    <files ~ '^.*\.([Hh][Tt][Aa])'>
-    order allow,deny
-    deny from all
-    satisfy all
-    </files>
+    	# eliminar a “assinatura” do servidor que é exibida nas páginas de erro
 
-    # eliminar a “assinatura” do servidor que é exibida nas páginas de erro
+    	ServerSignature Off
+    	Options All -Indexes
 
-    ServerSignature Off
-    Options All -Indexes
+    	# CONFIGURAR UTILIZAÇÃO DO HTTPS
 
-    # TIRAR EXTENSAO .HTML
-    DirectoryIndex index.php
-    RewriteEngine on
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME}\.php -f
+    	AddDefaultCharset utf-8
 
-    # CONFIGURAR UTILIZAÇÃO DO HTTPS
-
-    AddDefaultCharset utf-8
-
-    AddCharset utf-8 .html .css .js .xml .json .rss
+    	AddCharset utf-8 .html .css .js .xml .json .rss
 
 
+    	<IfModule mod_rewrite.c>
 
-    <IfModule mod_rewrite.c>
+    	  RewriteEngine On
+    	  RewriteCond %{HTTPS} !=on
+    	  RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
-      RewriteEngine On
-      RewriteCond %{HTTPS} !=on
-      RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+    	  RewriteCond %{http_host} ^HTACCESS [NC]
+    	  RewriteRule ^(.*)$ http://www.rotinaservicos.com/$1 [r=301,NC]
+    	  RewriteRule ^index.php$ http://www.rotinaservicos.com/ [r=301,NC,L]
 
-        RewriteCond %{http_host} ^HTACCESS [NC]
-
-        RewriteRule ^(.*)$ ".$url."$1 [r=301,NC]
-
-        RewriteRule ^index.php$ ".$url." [r=301,NC,L]
-
-        RewriteEngine On
-        RewriteCond %{SCRIPT_FILENAME} !-f
-        RewriteCond %{SCRIPT_FILENAME} !-d
-        RewriteRule ^(.*)$ index.php?page=$1
+    	  RewriteEngine On
+    	  RewriteCond %{SCRIPT_FILENAME} !-f
+    	  RewriteCond %{SCRIPT_FILENAME} !-d
+    	  RewriteRule ^(.*)$ index.php?page=$1
 
 
-    </IfModule>
-
-    # Impede de navegar em pastas sem um documento padrão (index) e exibe Erro 403 - permissão negada
-
-    <IfModule mod_autoindex.c>
-
-        Options -Indexes
-
-    </IfModule>
+    	</IfModule>
 
 
-    #ERROR 404 REDIRECT
+    	# Impede de navegar em pastas sem um documento padrão (index) e exibe Erro 403 - permissão negada
+    	<IfModule mod_autoindex.c>
 
-    ErrorDocument 404 https://www.rotinaservicos.com/404
-    ErrorDocument 500 https://www.rotinaservicos.com/404
+    	    Options -Indexes
 
-    RewriteEngine On
-    RewriteBase /
+    	</IfModule>
 
-    RewriteCond %{REQUEST_URI} ^/404/$
-    RewriteRule ^(.*)$ /404 [L]
+    	#ERROR 404 REDIRECT
 
-    RewriteCond %{REQUEST_URI} ^/500/$
-    RewriteRule ^(.*)$ /404 [L]
+    	ErrorDocument 404 https://www.rotinaservicos.com/404
+    	ErrorDocument 500 https://www.rotinaservicos.com/404
 
-    # Fazendo cache de recursos com Expires HTTP
-    <IfModule mod_expires.c>
-      Header set Cache-Control \"public\"
-      ExpiresActive on
 
-      ExpiresDefault \"access plus 1 month\"
-      ExpiresByType text/cache-manifest \"access plus 0 seconds\"
-      ExpiresByType text/html \"access plus 0 seconds\"
+    	#Força a utilizar Cache-Control e Expires header
+    	<IfModule mod_headers.c>
+    	Header unset ETag
+    	</IfModule>
+    	FileETag None
+    	<IfModule mod_expires.c>
 
-      # Dados
-      ExpiresByType text/xml \"access plus 0 seconds\"
-      ExpiresByType application/xml \"access plus 0 seconds\"
-      ExpiresByType application/json \"access plus 0 seconds\"
+    	ExpiresActive on
+    	ExpiresDefault "access plus 1 month"
+    	ExpiresByType text/cache-manifest "access plus 0 seconds"
 
-      # Feed RSS
-      ExpiresByType application/rss+xml \"access plus 1 hour\"
+    	# Html
+    	ExpiresByType text/html "access plus 0 seconds"
 
-      # Favicon (não pode ser renomeado)
-      ExpiresByType image/vnd.microsoft.icon \"access plus 1 week\"
+    	# Data
+    	ExpiresByType text/xml "access plus 0 seconds"
+    	ExpiresByType application/xml "access plus 0 seconds"
+    	ExpiresByType application/json "access plus 0 seconds"
 
-      # Imagens, vídeo, audio;
-      ExpiresByType image/gif \"access plus 1 month\"
-      ExpiresByType image/png \"access plus 1 month\"
-      ExpiresByType image/jpg \"access plus 1 month\"
-      ExpiresByType image/jpeg \"access plus 1 month\"
+    	# Feed
+    	ExpiresByType application/rss+xml "access plus 1 hour"
+    	ExpiresByType application/atom+xml "access plus 1 hour"
 
-      ExpiresByType video/ogg \"access plus 1 month\"
-      ExpiresByType audio/ogg \"access plus 1 month\"
-      ExpiresByType video/mp4 \"access plus 1 month\"
-      ExpiresByType video/webm \"access plus 1 month\"
+    	# Favicon
+    	ExpiresByType image/x-icon "access plus 1 week"
 
-      # Webfonts
-      ExpiresByType font/truetype \"access plus 1 month\"
-      ExpiresByType font/opentype \"access plus 1 month\"
-      ExpiresByType font/woff \"access plus 1 month\"
-      ExpiresByType font/woff2 \"access plus 1 month\"
-      ExpiresByType image/svg+xml \"access plus 1 month\"
-      ExpiresByType application/vnd.ms-fontobject \"access plus 1 month\"
+    	# Media: images, video, audio
+    	ExpiresByType image/gif "access plus 1 month"
+    	ExpiresByType image/png "access plus 1 month"
+    	ExpiresByType image/jpg "access plus 1 month"
+    	ExpiresByType image/jpeg "access plus 1 month"
+    	ExpiresByType video/ogg "access plus 1 month"
+    	ExpiresByType audio/ogg "access plus 1 month"
+    	ExpiresByType video/mp4 "access plus 1 month"
+    	ExpiresByType video/webm "access plus 1 month"
 
-      # CSS / jScript
-      ExpiresByType text/css \"access plus 1 month\"
-      ExpiresByType application/javascript \"access plus 1 month\"
-      ExpiresByType text/javascript \"access plus 1 month\"
-    </IfModule>
+    	# HTC files
+    	ExpiresByType text/x-component "access plus 1 month"
+    	# Webfonts
+    	ExpiresByType application/x-font-ttf "access plus 1 month"
+    	ExpiresByType font/opentype "access plus 1 month"
+    	ExpiresByType font/truetype "access plus 1 month"
+    	ExpiresByType application/x-font-woff "access plus 1 month"
+    	ExpiresByType image/svg+xml "access plus 1 month"
+    	ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+    	ExpiresByType font/woff "access plus 1 month"
+    	ExpiresByType font/woff2 "access plus 1 month"
 
-    ";
+    	# CSS / JS
+    	ExpiresByType text/css "access plus 1 year"
+    	ExpiresByType application/javascript "access plus 1 year"
+    	ExpiresByType application/x-javascript "access plus 1 year"
+
+    	</IfModule>
+
+    	#Força o IE a sempre carregar utilizando a última versão disponível
+
+    	<IfModule mod_headers.c>
+
+    	  Header set X-UA-Compatible "IE=Edge,chrome=1"
+    	  <FilesMatch "\.(js|css|gif|png|jpeg|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico|webp|appcache|manifest|htc|crx|oex|xpi|safariextz|vcf)$" >
+    	  Header unset X-UA-Compatible
+    	  </FilesMatch>
+
+    	</IfModule>
+
+    ';
 
     $htaccess = fopen('.htaccess', "w");
 

@@ -1,11 +1,4 @@
-<?php 
-$title		= 'O que é área comum e o que é área privativa?';
-$desc       = ''.$title.' - fundada em 1997 e desde então atua nas áreas de portaria e controle de acesso, limpeza, zeladoria e conservação de condomínios residenciais, comércios e empresas em geral.';
-$key        = ''.$title.', terceirizados, servicos, servicos prediais, predios, ap, casa, condominio';
-$var        = ''.$title.',Inicio';
-include 'inc/base/head.php';
-$autor	= 'Bruno Romero';
-?>
+<?php include 'inc/componentes/blog.head.php'; ?>
 </head>
 <body>
 	<!-- TOPO -->
@@ -20,7 +13,7 @@ $autor	= 'Bruno Romero';
 
 			<div class="container">
 				
-				<article class="article-full">
+				<article class="article">
 
 					<?php include('inc/componentes/breadcrumb.php'); ?>
 
@@ -28,7 +21,7 @@ $autor	= 'Bruno Romero';
 
 					<?php include('inc/componentes/share-on.php'); ?>
 
-					<p>Publicado em 11 de Ago de 2016</p>
+					<p>Publicado em <?=$published?></p>
 
 					<?php include('inc/componentes/thumb.php') ?>
 
@@ -46,15 +39,12 @@ $autor	= 'Bruno Romero';
 
 					<br class="clearfix">				
 
-					<?php include('inc/componentes/related.blog.php'); ?>
 
 				</article>
 
-				<aside class="aside">
-					<ul class="nav-aside">
-						<li><a href="#" title="Teste">Teste</a></li>
-					</ul>
-				</aside>
+				<div class="aside">
+					<?php include('inc/componentes/blog.inc.php'); ?>
+				</div>
 
 			</div>
 

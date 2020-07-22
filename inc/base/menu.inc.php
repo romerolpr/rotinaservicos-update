@@ -3,7 +3,7 @@
 if(isset($menu)&&!empty($menu)):
 	foreach ($menu as $key => $value):
 
-		if(!empty($urlPagina)):
+		if(isset($URL[0]) && !empty($URL[0])):
 			$href = $url.$value[0]; 
 			$value[3] = 'null';
 		else:
