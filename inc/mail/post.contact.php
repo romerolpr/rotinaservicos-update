@@ -13,7 +13,7 @@ if(isset($input['sendForm']) && !empty($input['sendForm'])):
 	<script>
 	<?php 
 	//inclui o javascript pro message
-	include('inc/mail/js/message-alert.js'); 
+	include(MAIL . 'js/message-alert.js'); 
 	?>
 	</script>
 

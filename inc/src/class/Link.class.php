@@ -1,7 +1,12 @@
 <?php
 
-//definindo url padrão
-require_once 'inc/base/root/url.inc.php';
+//definindo constantes para o site
+define('REQ', 			'inc/_main/');
+define('BASE', 			'inc/base/');
+define('ROOT', 			'inc/base/root/');
+define('COMPONENTES', 	'inc/componentes/');
+define('VETOR', 		'inc/src/vetor/');
+define('MAIL', 			'inc/mail/');
 
 /*
 FAZ GESTÃO DE LINKS E URL AMIGAVEIS INCLUINDO NUMEROS DE PAGINAÇÃO, PASTAS, ARQUIVOS E LINKS

@@ -26,7 +26,7 @@
 				endforeach;
 				?>
 				<div class="fleft">
-					<?php include 'inc/componentes/canais.inc.php'; ?>
+					<?php include(COMPONENTES . 'canais.inc.php'); ?>
 				</div>
 			</div>
 		</div>
@@ -41,19 +41,20 @@
 			</div>
 			<nav class="fright hide-mobile">
 				<ul>
-					<?php include 'inc/base/menu.inc.php'; ?>
+					<?php 
+					$submenu = true;
+					include( BASE . 'menu.inc.php') ; 
+					?>
 				</ul>
-				<?php if(!$footer): ?>
 				<a href="#contato" data-budget="cliente" class="__btn goto fright" title="Solicite seu orçamento e ganhe 5% de desconto!"><span class="btn-topo">Solicite seu orçamento!</span></a>
-				<?php endif; ?>
 			</nav>
 			<div class="show-mobile menu-mobile">
 				<button class="s-mobile"><i class="fa fa-bars"></i></button>
 				<div class="nav-mobile showUpMenu">
 					<ul>
 						<?php 
-						$footer = true;
-						include 'inc/base/menu.inc.php'; 
+						$footer = true; $submenu = false;
+						include( BASE .'menu.inc.php' ); 
 						?>
 					</ul>
 				</div>

@@ -1,26 +1,6 @@
-<nav class="nav-aside">
-	<a href="<?=$url?>artigos" title="Artigos">
-		<h3>Artigos</h3>
-	</a>
-	<ul class="nav-aside">
-		<?php 
-		foreach ($vetBlog as $key => $value): 
-		if($link->Link != $value['url']):
-		?>
-		<li><a href="<?=$url?>artigos/<?=$value['url']?>" title="<?=$value['name']?>"><?=$value['name']?></a></li>
-		<?php 
-		else: ?>
-		<li class="active"><a href="<?=$url?>artigos/<?=$value['url']?>" title="<?=$value['name']?>"><?=$value['name']?></a></li>
-		<?php 
-		endif;
-		endforeach;
-		?>
-	</ul>
-</nav>
-
 <div class="related">
 <div class="related_title">
-	<h2>Veja também</h2>
+	<h3>Artigos relacionados</h3>
 </div>
 <div class="related_load">
 <?php
@@ -49,17 +29,16 @@ if ($link->Link != $valor['url']):
 
 ?>
 	<div class="box_related">
-		<div class="cover_related">
-			<a href="<?=$url.$link->Path.'/'.$valor['url']?>" class="link">
+		<a href="<?=$url.$link->Path.'/'.$valor['url']?>" class="link">
+			<div class="cover_related">
 				<img src="<?=$url.$path?>" alt="<?=$valor['name']?> - <?=$nomeSite?>" title="<?=$valor['name']?> - <?=$nomeSite?>">
-			</a>
-		</div>
-		<div class="content_related">
-			<a href="<?=$url.$link->Path.'/'.$valor['url']?>" class="link">
+			</div>
+			<div class="content_related">
 				<h2><?=$valor['name']?></h2>
-				<p><?=$valor['published']?></p>
-			</a>
-		</div>
+				<span><?=$valor['published']?></span>
+				<p><?=$valor['description']?></p>
+			</div>
+		</a>
 	</div>
 <?php 
 	
@@ -68,17 +47,16 @@ if ($link->Link != $valor['url']):
 	?>
 
 		<div class="box_related">
-			<div class="cover_related">
-				<a href="<?=$url.$link->Path.'/'.$valor['url']?>" class="link">
+			<a href="<?=$url.$link->Path.'/'.$valor['url']?>" class="link">
+				<div class="cover_related">
 					<img src="<?=$url.$path?>" alt="<?=$valor['name']?> - <?=$nomeSite?>" title="<?=$valor['name']?> - <?=$nomeSite?>">
-				</a>
-			</div>
-			<div class="content_related">
-				<a href="<?=$url.$link->Path.'/'.$valor['url']?>" class="link">
+				</div>
+				<div class="content_related">
 					<h2><?=$valor['name']?></h2>
-					<p><?=$valor['published']?></p>
-				</a>
-			</div>
+					<span><?=$valor['published']?></span>
+					<p><?=$valor['description']?></p>
+				</div>
+			</a>
 		</div>
 
 <?php 
@@ -94,3 +72,26 @@ endforeach;
 ?>
 </div>
 </div>
+
+<?php if(!$related): ?>
+	<nav class="nav-aside">
+		<a href="<?=$url?>artigos" title="Artigos">
+			<h3>Artigos</h3>
+		</a>
+		<ul class="nav-aside">
+			<?php 
+			foreach ($vetBlog as $key => $value): 
+			if($link->Link != $value['url']):
+			?>
+			<li><a href="<?=$url?>artigos/<?=$value['url']?>" title="<?=$value['name']?>"><?=$value['name']?></a></li>
+			<?php 
+			else: ?>
+			<li class="active"><a href="<?=$url?>artigos/<?=$value['url']?>" title="<?=$value['name']?>"><?=$value['name']?></a></li>
+			<?php 
+			endif;
+			endforeach;
+			?>
+			<li class="show-all"><a href="<?=$url?>artigos" title="Ver todos">Ver todos</a></li>
+		</ul>
+	</nav>
+<?php endif; ?>

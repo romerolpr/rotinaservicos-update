@@ -41,9 +41,9 @@
 				<div class="load" style="display: none;"><span></span></div>
 				<?php
 				//post
-				include 'inc/mail/post.contact.php';
+				include(MAIL . 'post.contact.php');
 				//forms
-				include 'inc/componentes/contato.inc.php'; 
+				include(COMPONENTES . 'contato.inc.php'); 
 				?>
 			</div>
 			<div class="col-5 pt-0">

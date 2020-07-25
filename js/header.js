@@ -12,7 +12,7 @@ $(document).ready(function(){
 	        $('#mblock').css({'display':'none','height':'80px'});
 	        menu.removeClass('headerfixed');
 	    }
-	    if(URL == ""){
+	    if(URL=="home"){
 		    //archor
 		    if (nVScroll < $('#empresa').offset().top-80) {
 		        menuli.removeClass('active'); //desativa classe
@@ -33,6 +33,8 @@ $(document).ready(function(){
 		        $('header#menu nav > ul li:nth-child(4), #menu > div > div.show-mobile.menu-mobile > div > ul li:nth-child(4)').addClass('active');
 		        $('header#menu nav > ul li.mobile, #menu > div > div.show-mobile.menu-mobile > div > ul li.mobile').addClass('active');
 		    }
+		} else {
+			
 		}
 	}
 

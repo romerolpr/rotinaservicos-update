@@ -18,13 +18,13 @@ $Key = '6Lfn2-QUAAAAAPnZO6NWUqHYbKGlYCh5_NEblZXZ';
 $secret = '6Lfn2-QUAAAAACIdwm0r86XCfCTWhSYC_d70QS8P';
 
 //menu
-include 'inc/base/menu.php';
+include(BASE . 'menu.php');
 
 //canais
-include 'inc/base/canais.php';
+include(BASE . 'canais.php');
 
 //telefones
-include 'inc/base/fone.php';
+include(BASE . 'fone.php');
 
 //Whatsapp do site
 $text					= 'Olá,%20Gostaria%20de%20Saber%20Mais%20Sobre%20a%20Rotina%20Serviços%20Terceirizados!'; // mensagem do whatsapp
@@ -33,7 +33,5 @@ $whatsapp 				= array('' . $ddd . '994210145', $text, true);
 //esconde erros
 error_reporting(0);
 ini_set(“display_errors”, 0 );
-
-$tabela = true;
 
 ?>

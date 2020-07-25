@@ -62,3 +62,35 @@ $(document).ready(function(){
         },2000);
     }
 });
+//BLOG
+//conta quantos box tem
+let countBox    = $('.sub_blog .box_box').length, 
+    scrollBox   = $('.scroll_content'),
+    times       = 1,
+    delay       = 6 * 1000,
+    click       = 0;
+//funcao do scroll
+function scrollContent() {
+    times++; // incrementa
+    if( times < countBox) {
+        scrollBox.css({'margin-top':'-275px'});
+    } else {
+        scrollBox.css({'margin-top':'0'});
+        times = 1;
+    }
+}
+//clica no botao
+$('#scrollContentButton').on('click', function(){
+    scrollContent();
+    click = 1;
+});
+//troca do slider
+setInterval(function(){
+    if(click!=0){
+        setTimeout(function(){
+            scrollContent();
+        }, delay * 2);
+    } else {
+        scrollContent();
+    }
+}, delay);

@@ -50,7 +50,7 @@
 </div>
 <div class="clear"></div>
 <!-- empresa -->
-<div class="col-12 p-40" id="empresa">
+<div class="col-12" id="empresa">
 	<div class="container">	
 		<div class="col-12 effect fadeIn">
 			<h2 class="tcenter sublime">Sobre nós</h2>

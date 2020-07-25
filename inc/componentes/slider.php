@@ -7,7 +7,7 @@
 					<div class="col-12 effect Left">
 						<?php
 
-						if(isset($URL) && !empty($URL[0]) && $URL[0] != 'home'):
+						if(isset($URL) && $URL[0] != 'home'):
 
 						?>
 						
@@ -31,7 +31,7 @@
 						<div class="title">
 							<h1>
 								<?php
-								if(isset($URL) && !empty($URL[0]) && $URL[0] != 'home'):
+								if(isset($URL) && $URL[0] != 'home'):
 									echo $title;
 								else:
 									echo $nomeSite;
@@ -53,7 +53,7 @@
 			</div>
 		</div>
 		<div class="moldura">
-			<div class="filter"></div>
+			<div class="filter hide-sm-mobile"></div>
 			<div class="img"></div>
 		</div>
 	</div>

@@ -40,8 +40,11 @@
 	.slider .moldura .img {
 		/*background-image: url(<?=$url?>images/rotinaservicos-02.jpg);*/
 	}
-	.article, .aside {
+	.article {
 		width: 100%;
+	}
+	.aside {
+		display: none;
 	}
 }
 /* Tablets pequenos */
@@ -91,6 +94,24 @@
 	.slider .moldura .img {
 		/*background-image: url(<?=$url?>images/rotinaservicos-03.jpg);*/
 	}
+	.default-item .cover-item,
+	.default-item .txt-item {
+		width: 100%;
+		height: auto;
+	}
+	.default-item .txt-item {
+		padding-left: 2em;
+	}
+	.content_blog .star_blog,
+	.content_blog .sub_blog {
+		width: 100%;
+	}
+	.push-blog {
+		height: 70px;
+	}
+	.box_btn {
+		width: 100%;
+	}
 }
 /* Celulares */
 @media (max-width: 480px){
@@ -118,7 +139,16 @@
 		background: rgba(255,255,255,0.8);
 	}
 	.slider .moldura .img {
-		/*background-image: url(<?=$url?>images/rotinaservicos-04.jpg);*/
+		background-image: url(<?=$url?>images/artigos/temp-thumb.jpg);
+		opacity: .1;
+	}
+	.related .content_related {
+		width: 65%;
+		transition: all .3s ease;
+		padding-left: 0;
+	}
+	.cover_related {
+		width: 35%;
 	}
 }
 /* Celulares, correcoes */

@@ -6,8 +6,8 @@
 <?php
 	
 	//variaveis do site
-	include('inc/base/root/geral.php');
-	include('inc/base/root/htaccess.php');
+	include(ROOT . 'geral.php');
+	include(ROOT . 'htaccess.php');
 
 ?>
 
@@ -26,8 +26,8 @@
 	include('css/effects.css');
 	include('css/base.css');
 	include('css/queries.css');
-	include('inc/mail/css/message-alert.css');
 	include('css/fontawesome.css');
+	include(MAIL . 'css/message-alert.css');
 
 	?>
 

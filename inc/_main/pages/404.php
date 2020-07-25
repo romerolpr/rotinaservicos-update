@@ -6,23 +6,23 @@ $var = array(
 	'key' => $title . ', terceirizados, servicos, servicos prediais, predios, ap, casa, condominio',
 	'var' => $title . ', Inicio'
 );
-include 'inc/base/head.php';
+include(BASE . 'head.php');
 ?>
 </head>
 <body>
 	<!-- TOPO -->
-	<?php include('inc/base/topo.php'); ?>
+	<?php include(BASE . 'topo.php'); ?>
 	<!-- SLIDER -->
-	<?php include('inc/componentes/slider.php'); ?>
+	<?php include(COMPONENTES . 'slider.php'); ?>
 	<!-- conteudo -->
 	<div class="container">
-		<?php include('inc/componentes/notfound.php'); ?>
+		<?php include(COMPONENTES . 'notfound.php'); ?>
 	</div>
 	<!-- Footer, rodapé -->
 	<?php 
 	//footer e "lab"
-	include('inc/base/footer.php');
-	include('inc/base/root/scripts.php'); 
+	include(BASE . 'footer.php');
+	include(ROOT . 'scripts.php'); 
 	?>	
 	<!-- Script -->
 	<script><?php include('js/script.js');?></script>

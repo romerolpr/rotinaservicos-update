@@ -3,7 +3,7 @@
 	//whatsapp
 	if (isset($whatsapp) && !empty($whatsapp) && $whatsapp[2] != false):
 
-		include('inc/componentes/whatsapp-button.php');
+		include(COMPONENTES . 'whatsapp-button.php');
 
 	endif;
 
@@ -38,7 +38,7 @@
 						<?php
 						$footer 	= true;
 						$submenu 	= false;
-						include 'inc/base/menu.inc.php';
+						include(BASE . 'menu.inc.php');
 						?>
 					</ul>
 				</nav>
@@ -69,7 +69,7 @@
 				<div class="fright">
 					<?php 
 					$footer = true;
-					include 'inc/componentes/canais.inc.php'; 
+					include(COMPONENTES . 'canais.inc.php'); 
 					?>
 				</div>
 			</div>

@@ -32,32 +32,66 @@ else:
 		'var' => $title . ', Inicio'
 	);
 
-	include 'inc/base/head.php';
+	include (BASE . 'head.php');
 
 ?>
-	</head>
-	<body>
-		<!-- TOPO -->
-		<?php include('inc/base/topo.php'); ?>
-		<!-- SLIDER -->
-		<?php include('inc/componentes/slider.php'); ?>
-		<!-- conteudo -->
-		<div class="container">
-			<div class="col-12">	
-				<div class="container">
-					<?php include('inc/componentes/breadcrumb.php'); ?>
-					<p>Explore por todos os artigos da <?=$nomeSite?>.</p>
+</head>
+<body>
+	<!-- TOPO -->
+	<?php include(BASE . 'topo.php'); ?>
+	<!-- SLIDER -->
+	<?php include(COMPONENTES . 'slider.php'); ?>
+	<!-- conteudo -->
+	<div class="container">
+		<div class="col-12">	
+			<div class="container">
+				<?php include(COMPONENTES . 'breadcrumb.php'); ?>
+				<p>Explore por todos os artigos da <?=$nomeSite?>.</p>
+				<br>
+				<div class="content-item">
+
+					<?php
+
+					foreach ($vetBlog as $key => $valor):
+
+						$titleBlog 		= $valor['name'];
+						$descBlog 		= $valor['description'];
+						$imageBlog 		= $valor['cover'];
+						$publishedBlog 	= $valor['published'];
+						$pathBlog 		= $url . 'images/artigos/' . $imageBlog; //caminho para as imagens
+						$urlBlog		= $url . 'artigos/' . $valor['url'];
+						$autorBlog      = $valor['autor'];
+
+					?>
+
+					<div class="default-item">
+						<a href="<?=$urlBlog?>" title="<?=$titleBlog?>">
+							<div class="cover-item">
+								<img src="<?=$pathBlog?>" title="<?=$titleBlog?>" alt="<?=$titleBlog?>">
+							</div>
+							<div class="txt-item">
+								<span class="published"><?=$publishedBlog?></span>
+								<span class="autor"><?=$autorBlog?></span>
+								<h2><?=$titleBlog?></h2>
+								<p><?=$descBlog?></p>
+							</div>
+						</a>
+					</div>
+
+					<?php endforeach; ?>
+
 				</div>
 			</div>
 		</div>
-		<!-- Footer, rodapé -->
-		<?php 
-		//footer e "lab"
-		include('inc/base/footer.php');
-		include('inc/base/root/scripts.php'); 
-		?>	
-		<!-- Script -->
-		<script><?php include('js/script.js');?></script>
-	</body>
-	</html>
+	</div>
+	<!-- Footer, rodapé -->
+	<?php 
+	//footer e "lab"
+	include(BASE . 'footer.php');
+	include(ROOT . 'scripts.php'); 
+	?>	
+	<!-- Script -->
+	<script><?php include('js/script.js');?></script>
+</body>
+</html>
 <?php endif; ?>

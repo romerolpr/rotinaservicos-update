@@ -7,33 +7,34 @@ $var = array(
 	'var' => $title . ', Inicio'
 );
 
-include 'inc/base/head.php';
+include(BASE . 'head.php');
 ?>
 </head>
 <body>
 	<!-- TOPO -->
-	<?php include('inc/base/topo.php'); ?>
+	<?php include(BASE . 'topo.php'); ?>
 	<!-- SLIDER -->
-	<?php include('inc/componentes/slider.php'); ?>
+	<?php include(COMPONENTES . 'slider.php'); ?>
 	<!-- conteudo -->
 	<div class="anchor">
 		<?php 
-		include('inc/componentes/about.php'); 
-		include('inc/componentes/invite.php'); 
+		include(COMPONENTES . 'about.php'); 
+		include(COMPONENTES . 'home.blog.php'); 
+		include(COMPONENTES . 'invite.php'); 
 		?>
 	</div>
 	<div class="anchor">	
-		<?php include('inc/componentes/items.php'); ?>
+		<?php include(COMPONENTES . 'items.php'); ?>
 	</div>
 	<!-- Contato, forms -->
 	<div class="effect fadeIn fix">
-		<?php include('inc/componentes/contact.php'); ?>
+		<?php include(COMPONENTES . 'contact.php'); ?>
 	</div>
 	<!-- Footer, rodapé -->
 	<?php 
 	//footer e scrips
-	include('inc/base/footer.php');
-	include('inc/base/root/scripts.php'); 
+	include(BASE . 'footer.php');
+	include(ROOT . 'scripts.php'); 
 	?>	
 	<!-- Script -->
 	<script><?php include('js/script.js'); ?></script>

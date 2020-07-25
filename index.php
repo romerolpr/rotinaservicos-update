@@ -1,6 +1,9 @@
 <?php 
 //inclui classe pra URL amigável
-require_once 'inc/Link.class.php';
+require_once('inc/src/class/Link.class.php');
+
+//definindo url padrão
+require_once(ROOT . 'url.inc.php');
 
 //resgata a url
 if(!isset($_GET['page'])):
@@ -14,13 +17,12 @@ $URL = array_filter(explode('/', $URL));
 $urlPagina = end($Name);
 $urlpagina = str_replace('.php','',$urlPagina);
 $urlPagina == "index"? $urlPagina= "" : "";
-//cria constante
-define('REQ', 'inc/_main/');
+
 //cria objeto link
 $link = new Link();
 
 //vet para o blog
-include 'inc/_vetor/blog.vet.php';
+require_once(VETOR . 'blog.vet.php');
 
 //faz a condicao e inclui paginas
 if($link->Path != null):

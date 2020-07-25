@@ -1,10 +1,10 @@
-<?php include 'inc/componentes/blog.head.php'; ?>
+<?php include(COMPONENTES . 'blog.head.php');?>
 </head>
 <body>
 	<!-- TOPO -->
-	<?php include('inc/base/topo.php'); ?>
+	<?php include(BASE . 'topo.php'); ?>
 	<!-- SLIDER -->
-	<?php include('inc/componentes/slider.php'); ?>
+	<?php include(COMPONENTES . 'slider.php'); ?>
 	<!-- conteudo -->
 
 	<div class="anchor">
@@ -15,19 +15,23 @@
 				
 				<article class="article">
 
-					<?php include('inc/componentes/breadcrumb.php'); ?>
+					<?php include(COMPONENTES . 'breadcrumb.php'); ?>
 
 					<h2><?=$title?></h2>
 
-					<?php include('inc/componentes/share-on.php'); ?>
+					<?php include(COMPONENTES . 'share-on.php'); ?>
 
-					<p>Publicado em <?=$published?></p>
+					<p class="autor">
+						<strong>De <?=$autor?>, em São Paulo</strong>
+						<br>
+						<span><?=$published?></span>
+					</p>
 
-					<?php include('inc/componentes/thumb.php') ?>
+					<?php include(COMPONENTES . 'thumb.php') ?>
 
 					<p>Dando prosseguimento ao tema tratado no post anterior, “O que é área comum e o que é área privativa” (<a href="<?=$url?>artigos/area-comum-e-area-privativa" class="link">leia aqui</a>), iremos hoje abordar o tema da fração ideal em condomínios, sua definição e implicações.</p>
 
-					<p>O conceito de fração ideal é relativamente antigo, presente já na lei 4.561/64, também chamada de Lei de Condomínios, tendo nesta também sua definição, em seu Art. 1º, § 2, “A cada unidade caberá, como parte inseparável, uma fração ideal do terreno e coisas comuns, expressa sob forma decimal ou ordinária”.</p>
+					<p>O conceito de fração ideal é relativamente antigo, presente já na <a href="https://www.jusbrasil.com.br/topicos/11326133/artigo-32-da-lei-n-4591-de-16-de-dezembro-de-1964" class="link" target="_blank" rel="nofollow">lei 4.561/64</a>, também chamada de Lei de Condomínios, tendo nesta também sua definição, em seu Art. 1º, § 2, “A cada unidade caberá, como parte inseparável, uma fração ideal do terreno e coisas comuns, expressa sob forma decimal ou ordinária”.</p>
 
 					<p>Outro parágrafo desta lei, também fundamental para o entendimento da fração ideal, consta em seu Art. 12º, § 1, “Salvo disposição em contrário na Convenção, a fixação da quota no rateio corresponderá à fração ideal de terreno de cada unidade”. A partir desta leitura, obtemos duas importantes informações: 1) A lei sinaliza que a fração ideal é o método por ela adotado como o mais indicado para a divisão de cotas de despesas no condomínio e; 2) A lei dá autonomia para que cada condomínio delibere sobre a forma de divisão que julgar melhor, devendo esta constar em sua Convenção.</p>
 
@@ -39,13 +43,19 @@
 
 					<p>Nos próximos artigos, iremos tratar de forma detalhada como calcular a cota correspondente da fração ideal do seu condomínio.</p>
 
-					<br class="clearfix">				
+					<?php include(COMPONENTES . 'share-on.php'); ?>
+
+					<br class="clearfix">	
+
+					<?php $related=true; include(COMPONENTES . 'blog.inc.php'); ?>	
+
+					<?php include(COMPONENTES . 'blog.local.php'); ?>			
 
 
 				</article>
 
 				<div class="aside">
-					<?php include('inc/componentes/blog.inc.php'); ?>
+					<?php $related=false; include(COMPONENTES . 'blog.inc.php'); ?>
 				</div>
 
 			</div>
@@ -57,8 +67,8 @@
 	<!-- Footer, rodapé -->
 	<?php 
 	//footer e scrips
-	include('inc/base/footer.php');
-	include('inc/base/root/scripts.php'); 
+	include(BASE . 'footer.php');
+	include(ROOT . 'scripts.php'); 
 	?>	
 	<!-- Script -->
 	<script><?php include('js/script.js'); ?></script>

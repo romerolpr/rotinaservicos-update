@@ -30,5 +30,5 @@ $var = array(
 	'autor' => $autor
 );
 //inclui a head
-include 'inc/base/head.php';
+include(BASE . 'head.php');
 ?>

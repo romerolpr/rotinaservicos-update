@@ -1,10 +1,10 @@
-<?php include 'inc/componentes/blog.head.php'; ?>
+<?php include(COMPONENTES . 'blog.head.php');?>
 </head>
 <body>
 	<!-- TOPO -->
-	<?php include('inc/base/topo.php'); ?>
+	<?php include(BASE . 'topo.php'); ?>
 	<!-- SLIDER -->
-	<?php include('inc/componentes/slider.php'); ?>
+	<?php include(COMPONENTES . 'slider.php'); ?>
 	<!-- conteudo -->
 
 	<div class="anchor">
@@ -15,15 +15,19 @@
 				
 				<article class="article">
 
-					<?php include('inc/componentes/breadcrumb.php'); ?>
+					<?php include(COMPONENTES . 'breadcrumb.php'); ?>
 
 					<h2><?=$title?></h2>
 
-					<?php include('inc/componentes/share-on.php'); ?>
+					<?php include(COMPONENTES . 'share-on.php'); ?>
 
-					<p>Publicado em <?=$published?></p>
+					<p class="autor">
+						<strong>De <?=$autor?>, em São Paulo</strong>
+						<br>
+						<span><?=$published?></span>
+					</p>
 
-					<?php include('inc/componentes/thumb.php') ?>
+					<?php include(COMPONENTES . 'thumb.php') ?>
 
 					<p>O post de hoje irá tratar sobre obras em condomínios. Abordaremos o tema em duas etapas: obras em áreas comuns e obras em áreas privativas, no interior das unidades habitacionais. De início, é de fundamental importância salientar que nenhuma obra pode comprometer a segurança do edifício. Deste modo, é de grande valia a contratação de profissional devidamente habilitado (arquiteto ou engenheiro), com inscrição regular em seu respectivo conselho de classe (CAU ou CREA).</p>
 
@@ -35,7 +39,7 @@
 
 					<p>Obras úteis são aquelas que visam à melhora na utilização de equipamentos presentes no condomínio, como por exemplo, reforma de guarita da portaria (adaptações a fim de um ambiente mais seguro e/ou confortável), troca de fiação elétrica, adaptações para acesso mais fácil de veículos, etc. Ou seja, que tenham a finalidade de aumentar ou facilitar o uso de um determinado bem. Sua aprovação exige maioria absoluta em Assembléia.</p>
 
-					<p>Já as voluptuárias referem-se à obras de menor necessidade, em geral voltadas à melhorias de aparência geral da edificação, como pintura ou troca de piso do playground infantil. Sua aprovação demanda dois terços em Assembléia. As definições nos termos da Lei podem ser consultadas no Código Civil (Lei 10.406/02), em seu Art. 96, § 1º, § 2º e § 3º.</p>
+					<p>Já as voluptuárias referem-se à obras de menor necessidade, em geral voltadas à melhorias de aparência geral da edificação, como pintura ou troca de piso do playground infantil. Sua aprovação demanda dois terços em Assembléia. As definições nos termos da Lei podem ser consultadas no Código Civil (<a href="https://presrepublica.jusbrasil.com.br/legislacao/91577/codigo-civil-lei-10406-02" class="link" target="_blank" rel="nofollow">Lei 10.406/02</a>), em seu Art. 96, § 1º, § 2º e § 3º.</p>
 
 					<p>Vale ressaltar que as interpretações sobre a classificação de cada obra podem variar, sendo sempre recomendável a procura por especialistas do ramo, sobretudo em obras de alto valor. A própria lei (Código Civil) trata deste tema em seu Art. 1.341, dizendo em sua redação que obras necessárias urgentes e de grande custo deverão ser comunicadas à assembléia, dando a ela devida ciência, enquanto que se necessárias, mas não urgentes, também de altos custos, dever-se-ão passar por aprovação de todos os condôminos. Deste modo, é fundamental que o síndico ou qualquer outro responsável busque sempre o consenso entre moradores, justificando sua necessidade, com transparência de custos e sempre buscando o auxílio de profissionais capacitados.</p>
 
@@ -53,12 +57,19 @@
 
 					<p>Como dito acima, a comunicação com os moradores por parte do síndico é fundamental. Portanto, é extremamente válido que temas como horários para execução de obras, determinação de condições para movimentação de pessoas, equipamentos e materiais no interior do condomínio, uso do elevador, comunicação da obra e permissão para que o corpo diretivo visite os ambientes em obras constem na convenção coletiva e em espaços de divulgação internos, de modo que se faça todos saberem de suas responsabilidades.</p>
 
-					<br class="clearfix">				
+					
+					<?php include(COMPONENTES . 'share-on.php'); ?>
+
+					<br class="clearfix">	
+
+					<?php $related=true; include(COMPONENTES . 'blog.inc.php'); ?>
+
+					<?php include(COMPONENTES . 'blog.local.php'); ?>				
 
 				</article>
 
 				<div class="aside">
-					<?php include('inc/componentes/blog.inc.php'); ?>
+					<?php $related=false; include(COMPONENTES . 'blog.inc.php'); ?>
 				</div>
 
 			</div>
@@ -70,8 +81,8 @@
 	<!-- Footer, rodapé -->
 	<?php 
 	//footer e scrips
-	include('inc/base/footer.php');
-	include('inc/base/root/scripts.php'); 
+	include(BASE . 'footer.php');
+	include(ROOT . 'scripts.php'); 
 	?>	
 	<!-- Script -->
 	<script><?php include('js/script.js'); ?></script>
