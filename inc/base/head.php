@@ -47,12 +47,21 @@
 <meta property="og:region" content="Brasil">
 <meta property="og:title" content="<?=$var['title']." - ".$nomeSite?>">
 <meta property="og:type" content="article">
-<meta property="og:url" content="<?=$url.$urlPagina?>">
 <meta property="og:description" content="<?=$var['description']?>">
 <meta property="og:site_name" content="<?=$nomeSite?>">
+
+<?php 
+
+(!$URL[1]) ? $meta = '<meta property="og:url" content="'.$url.$urlPagina.'">' : $meta = '<meta property="og:url" content="'.$url.$link->Path.'/'.$link->Link.'">'; 
+
+echo $meta;
+
+?>
+
 <link rel="canonical" href="<?=$url.$urlPagina?>">
 <link rel="icon" href="<?=$url?>images/logo.png">
 <link rel="apple-touch-icon" href="<?=$url?>images/logo.png"/>
+
 
 <title><?=$title.' - '.$nomeSite?></title>
 

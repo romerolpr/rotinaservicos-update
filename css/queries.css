@@ -112,6 +112,20 @@
 	.box_btn {
 		width: 100%;
 	}
+	.star_blog {
+		height: 275px!important;
+	}
+	.star_blog .content_ p {
+		margin: .5em 0 1em 0;
+		font-size: .9em;
+	}
+	.star_blog .box_blog .text_blog h2 {
+		font-size: 1.4em;
+		line-height: 1.25em;
+	}
+	.star_blog .box_blog .text_blog {
+		align-items: flex-end;
+	}
 }
 /* Celulares */
 @media (max-width: 480px){

@@ -15,12 +15,12 @@
     <IfModule mod_rewrite.c>
 
       RewriteEngine On
-      #RewriteCond %{HTTPS} !=on
-      #RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+      RewriteCond %{HTTPS} !=on
+      RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
-      #RewriteCond %{http_host} ^HTACCESS [NC]
-      #RewriteRule ^(.*)$ http://www.rotinaservicos.com/$1 [r=301,NC]
-      #RewriteRule ^index.php$ http://www.rotinaservicos.com/ [r=301,NC,L]
+      RewriteCond %{http_host} ^HTACCESS [NC]
+      RewriteRule ^(.*)$ http://www.rotinaservicos.com/$1 [r=301,NC]
+      RewriteRule ^index.php$ http://www.rotinaservicos.com/ [r=301,NC,L]
 
       RewriteEngine On
       RewriteCond %{SCRIPT_FILENAME} !-f
@@ -29,6 +29,26 @@
 
 
     </IfModule>
+
+    
+    # Forçando a última versão do IE, em vários casos quando ele poderia voltar ao modo IE7
+    <IfModule mod_setenvif.c>
+      <IfModule mod_headers.c>
+        BrowserMatch MSIE ie
+        Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+      </IfModule>
+    </IfModule>
+
+    # Informar os proxies alterações de conteúdo baseado em UA
+    <IfModule mod_headers.c>
+      Header append Vary User-Agent
+    </IfModule>
+
+    # Permite o acesso de todos os domínios para as web fontes.
+    <FilesMatch ".(ttf|otf|eot|woff|font.css)$">
+      <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+      </IfModule>
 
 
     # Impede de navegar em pastas sem um documento padrão (index) e exibe Erro 403 - permissão negada
@@ -96,16 +116,5 @@
     ExpiresByType text/css "access plus 1 year"
     ExpiresByType application/javascript "access plus 1 year"
     ExpiresByType application/x-javascript "access plus 1 year"
-
-    </IfModule>
-
-    #Força o IE a sempre carregar utilizando a última versão disponível
-
-    <IfModule mod_headers.c>
-
-      Header set X-UA-Compatible "IE=Edge,chrome=1"
-      <FilesMatch "\.(js|css|gif|png|jpeg|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico|webp|appcache|manifest|htc|crx|oex|xpi|safariextz|vcf)$" >
-      Header unset X-UA-Compatible
-      </FilesMatch>
 
     </IfModule>

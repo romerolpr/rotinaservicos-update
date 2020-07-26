@@ -84,13 +84,15 @@ $('#scrollContentButton').on('click', function(){
     scrollContent();
     click = 1;
 });
-//troca do slider
-setInterval(function(){
-    if(click!=0){
-        setTimeout(function(){
+if($(window).width() > 767){
+    //troca do slider
+    setInterval(function(){
+        if(click!=0){
+            setTimeout(function(){
+                scrollContent();
+            }, delay * 2);
+        } else {
             scrollContent();
-        }, delay * 2);
-    } else {
-        scrollContent();
-    }
-}, delay);
+        }
+    }, delay);
+}

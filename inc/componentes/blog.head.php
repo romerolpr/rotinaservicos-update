@@ -31,4 +31,7 @@ $var = array(
 );
 //inclui a head
 include(BASE . 'head.php');
+
+echo '<meta property="og:image" content="<?=$url.$path.$image?>" />';
+
 ?>

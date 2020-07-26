@@ -1,4 +1,4 @@
-<div class="col-12 c-gray p-40 align effect fadeIn">
+<div class="col-12 c-gray p-40">
 	<div class="container">
 
 		<h2 class="tcenter">Os melhores serviços para seu condomínio ou empresa, contrate agora!</h2>
