@@ -7,7 +7,6 @@
 	
 	//variaveis do site
 	include(ROOT . 'geral.php');
-	include(ROOT . 'htaccess.php');
 
 ?>
 

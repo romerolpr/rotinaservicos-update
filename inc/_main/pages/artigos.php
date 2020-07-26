@@ -18,9 +18,9 @@ endforeach;
 if($link->Path != null):
 	//verifica se o arquivo existe
 	if(in_array(REQ . 'pages/' . $link->Path . '/' . $URL[1] . '.php', $Item)):
-		require(REQ . 'pages' . '/' .  $link->Path . '/' . $URL[1] . '.php');
+		include(REQ . 'pages' . '/' .  $link->Path . '/' . $URL[1] . '.php');
 	else:
-		require(REQ . 'pages' . '/' . $link->Path . '/404.php');
+		include(REQ . 'pages' . '/' . $link->Path . '/404.php');
 	endif;
 else: 
 
@@ -74,7 +74,11 @@ else:
 								<span class="autor"><?=$autorBlog?></span>
 								<h2><?=$titleBlog?></h2>
 								<p><?=$descBlog?></p>
+								<a href="<?=$urlBlog?>" title="Continuar lendo">
+									<span class="btn">Continuar lendo</span>
+								</a>
 							</div>
+							
 						</a>
 					</div>
 

@@ -3,7 +3,10 @@
 require_once('inc/src/class/Link.class.php');
 
 //definindo url padrão
-require_once(ROOT . 'url.inc.php');
+include(ROOT . 'url.inc.php');
+
+//vet para o blog
+include(VETOR . 'blog.vet.php');
 
 //resgata a url
 if(!isset($_GET['page'])):
@@ -21,14 +24,11 @@ $urlPagina == "index"? $urlPagina= "" : "";
 //cria objeto link
 $link = new Link();
 
-//vet para o blog
-require_once(VETOR . 'blog.vet.php');
-
 //faz a condicao e inclui paginas
 if($link->Path != null):
-	require(REQ . 'pages' . '/' . $link->Path . '/' . $link->File . '.php');
+	include(REQ . 'pages' . '/' . $link->Path . '/' . $link->File . '.php');
 else:
-	require(REQ . 'pages' . '/' . $link->File . '.php');
+	include(REQ . 'pages' . '/' . $link->File . '.php');
 endif;
 
 //gerar htaccess

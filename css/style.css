@@ -1167,6 +1167,10 @@ article p.autor span{
 	margin: 0 0 1em 0;
 	transition: all .3s ease; 
 }
+.default-item a {
+	text-decoration: none;
+	color: inherit;
+}
 .default-item .cover-item,
 .default-item .txt-item {
 	float: left;
