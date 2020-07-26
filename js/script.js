@@ -96,3 +96,15 @@ if($(window).width() > 767){
         }
     }, delay);
 }
+//aplicar a funcao
+$('.api').click(function(){
+var href=$(this).attr('href'),
+    cut=href.split('.');
+$(this).click(function(){
+  if($(window).width()>767){
+    $(this).attr('href','https://web.'+cut[1]+'.'+cut[2]);
+  }else{
+    $(this).attr('href','https://api.'+cut[1]+'.'+cut[2]);
+  }
+});
+});

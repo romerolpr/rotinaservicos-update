@@ -34,12 +34,10 @@
 </style>
 
 <base href="<?=$url?>">
-<meta name="description" content="<?=ucfirst($var['description'])?>">
 <meta name="keywords" content="<?=$var['var'].', '.$nomeSite?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="geo.position" content="<?=$latitude.";".$longitude?>">
 <meta name="geo.placename" content="<?=$cidade."-".$UF?>">
-<meta name="geo.region" content="<?=$UF?>-BR">
 <meta name="ICBM" content="<?=$latitude.";".$longitude?>">
 <meta name="robots" content="index,follow">
 <meta name="rating" content="General">
