@@ -9,7 +9,7 @@
 	<a href="http://twitter.com/intent/tweet?text=<?=rawurlencode($title)?>&url=<?=$url.$link->Path.'/'.$link->Link?>" rel="nofollow" target="_blank" title="Compartilhe com Twitter">
 		<span class="share-twitter"><i class="fa fa-twitter"></i></span>
 	</a>
-	<a href="mailto:<?=$contatoEmail?>?subject=<?=rawurlencode($title)?>-%20<?=$nomeSite?>&body=<?=rawurlencode('Olá, leia também "'.$title.'" em '.$url.$link->Path.'/'.$link->Link.'')?>" rel="nofollow" target="_blank" title="Compartilhe com E-mail">
+	<a href="mailto:<?=$contatoEmail?>?subject=<?=rawurlencode($title)?>-%20<?=rawurlencode($nomeSite)?>&body=<?=rawurlencode('Olá, leia também "'.$title.'" em '.$url.$link->Path.'/'.$link->Link.'')?>" rel="nofollow" target="_blank" title="Compartilhe com E-mail">
 		<span class="share-email"><i class="fa fa-envelope"></i></span>
 	</a>
 </div>

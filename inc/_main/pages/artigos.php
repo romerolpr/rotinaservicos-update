@@ -74,9 +74,7 @@ else:
 								<span class="autor"><?=$autorBlog?></span>
 								<h2><?=$titleBlog?></h2>
 								<p><?=$descBlog?></p>
-								<a href="<?=$urlBlog?>" title="Continuar lendo">
-									<span class="btn">Continuar lendo</span>
-								</a>
+								<span class="btn">Continuar lendo</span>
 							</div>
 							
 						</a>
