@@ -9,13 +9,12 @@
         $('head').append(`<script src="js/maskinput.js"><\/script>`);
           keyscroll = true;
         $(document).ready(function(){
-          // window.dataLayer = window.dataLayer || [];
-          // function gtag(){dataLayer.push(arguments);}
-          // gtag('js', new Date());
-          // gtag('config', 'UA-163505904-1');
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-163505904-1');
           //popup
           $('.popup-box').css({'display':'flex'});
-          $('body').addClass('scroll-hidden');
           $('.popup-box .close, .popup-box .opacitybox').on('click', function(){
             $('.popup-box').fadeOut(500);
             $('body').removeClass('scroll-hidden');

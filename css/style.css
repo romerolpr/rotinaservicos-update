@@ -1383,8 +1383,8 @@ article p.autor span{
 }
 .popup-box .content-popup{
 	position: relative;
-	width: 50%;
-	max-height: 80%;
+	width: 60%;
+	max-height: 95%;
 	background: #fff;
 	border-radius: 5px;
 	box-sizing: border-box;
