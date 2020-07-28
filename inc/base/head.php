@@ -11,12 +11,15 @@
 ?>
 
 <!-- JS -->
-<script><?php include('js/jquery.js'); ?></script>
+<script>
+	<?php 
+	include('js/jquery.js');
+	include(MAIL . 'js/message-alert.js');  
+	?>	
+</script>
 
 <!-- CSS -->
 <style>
-
-	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
 
 	<?php
 

@@ -6,18 +6,6 @@
 $input = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 if(isset($input['sendForm']) && !empty($input['sendForm'])): 
-	
-	//inclui o message
-	?>
-
-	<script>
-	<?php 
-	//inclui o javascript pro message
-	include(MAIL . 'js/message-alert.js'); 
-	?>
-	</script>
-
-	<?php
 
 	//quebra sessao do input submit e recaptcha
 	unset($input['sendForm'], $input['g-recaptcha-response'], $input['anexo']);

@@ -23,36 +23,6 @@
 
 	<blockquote class="hide"></blockquote>
 
-	<script>
-		$(function(){
-			$('.form > select').on('change', function (){
-				if($(this).val()=="Outro"){
-					$('blockquote').removeClass('hide');
-					$('<label>', {
-						class: 'new-input',
-						'for': 'otassunto'
-					}).text('Especifique o motivo de contato').appendTo('.form blockquote');
-					$('<input>', {
-						class: 'new-input',
-						'type': 'text',
-						'name': 'assunto_personalizado',
-						'required': 'required',
-						'placeholder': 'Motivo de contato',
-						'maxlength': '26'
-					}).appendTo('.form blockquote');
-				} else {
-					$('blockquote').addClass('hide');
-					$('.new-input').remove();
-				}
-
-				if($(this).val()=="Curriculo"){
-				  	<?php include('inc/mail/js/message-alert.js'); ?>
-				  	messageAlert('Sem vagas!', 'Infelizmente não estamos com vagas disponíveis no momento. Os currículos recebidos estão sendo organizados por ordem crescente.', 'warning');
-				}
-			});
-		});
-	</script>
-
 	<label for="mensagem_colb">Mensagem <span>*</span></label>
 	<textarea name="mensagem" placeholder="Mensagem..." id="mensagem_colb" required><?php if(isset($input['mensagem'])&&!empty($input['mensagem'])) echo $input['mensagem']; ?></textarea>
 	<div class="file">

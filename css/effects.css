@@ -125,3 +125,12 @@
 		transform: rotate(360deg);
 	}
 }
+
+@keyframes showPopup {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

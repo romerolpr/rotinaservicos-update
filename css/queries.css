@@ -126,6 +126,15 @@
 	.star_blog .box_blog .text_blog {
 		align-items: flex-end;
 	}
+	.popup-box .content-popup {
+		width: 80%;
+	}
+	.popup-box span.close {
+		right: 3%;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+	}
 }
 /* Celulares */
 @media (max-width: 480px){
