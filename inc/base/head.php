@@ -14,12 +14,15 @@
 <script>
 	<?php 
 	include('js/jquery.js');
+	include('js/geral.js');
 	include(MAIL . 'js/message-alert.js');  
 	?>	
 </script>
 
 <!-- CSS -->
 <style>
+
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
 
 	<?php
 
@@ -35,7 +38,20 @@
 
 </style>
 
+<?php 
+$description = strip_tags($var['description']);
+if (mb_strlen($description,"UTF-8") > 160):
+$description = mb_substr($description, 0, 159);
+$finalSpace = strrpos($description, " ");
+$description = substr($description, 0, $finalSpace);
+$description .= ".";
+elseif (mb_strlen($description,"UTF-8") < 140 && mb_strlen($description,"UTF-8") > 130 ):
+$description .= "...saiba mais.";
+endif;
+?>
+
 <base href="<?=$url?>">
+<meta name="description" content="<?=$description?>">
 <meta name="keywords" content="<?=$var['var'].', '.$nomeSite?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="geo.position" content="<?=$latitude.";".$longitude?>">
@@ -47,7 +63,7 @@
 <meta property="og:region" content="Brasil">
 <meta property="og:title" content="<?=$var['title']." - ".$nomeSite?>">
 <meta property="og:type" content="article">
-<meta property="og:description" content="<?=$var['description']?>">
+<meta property="og:description" content="<?=$description?>">
 <meta property="og:site_name" content="<?=$nomeSite?>">
 
 <?php 

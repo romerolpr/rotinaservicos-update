@@ -8,10 +8,6 @@ define('COMPONENTES', 	'inc/componentes/');
 define('VETOR', 		'inc/src/vetor/');
 define('MAIL', 			'inc/mail/');
 
-/*
-FAZ GESTÃO DE LINKS E URL AMIGAVEIS INCLUINDO NUMEROS DE PAGINAÇÃO, PASTAS, ARQUIVOS E LINKS
-*/
-
 
 class Link{
 

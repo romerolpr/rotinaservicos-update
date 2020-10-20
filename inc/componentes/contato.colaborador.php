@@ -17,7 +17,7 @@
 	<select name="assunto" required>
 		<option value="">-- Selecione --</option>
 		<option value="Contato">Contato padrão</option>
-		<option value="Curriculo">Envio de currículo</option>
+		<option value="Curriculo/ Colaborador">Envio de currículo</option>
 		<option value="Outro">Outro</option>
 	</select>
 

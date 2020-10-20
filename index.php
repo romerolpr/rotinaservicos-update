@@ -1,12 +1,18 @@
 <?php 
+
+date_default_timezone_set('America/Sao_Paulo');
+
 //inclui classe pra URL amigável
 require_once('inc/src/class/Link.class.php');
 
 //definindo url padrão
-include(ROOT . 'url.inc.php');
-
-//vet para o blog
-include(VETOR . 'blog.vet.php');
+$Name = pathinfo($_SERVER['SCRIPT_NAME']);
+$Host = $_SERVER['HTTP_HOST'];
+if ( $Name['dirname'] != '/' ):
+    $url = $_SERVER['REQUEST_SCHEME'].'://'.$Host.$Name['dirname'].'/';
+else:
+    $url = $_SERVER['REQUEST_SCHEME'].'://'.$Host.'/';
+endif;
 
 //resgata a url
 if(!isset($_GET['page'])):

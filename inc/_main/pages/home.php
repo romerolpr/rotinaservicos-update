@@ -6,9 +6,11 @@ $var = array(
 	'key' => $title . ', terceirizados, servicos, servicos prediais, predios, ap, casa, condominio',
 	'var' => $title . ', Inicio'
 );
-
 include(BASE . 'head.php');
+//vet para o blog
+include(VETOR . 'blog.vet.php');
 ?>
+<script><?php include('js/maskinput.js'); ?></script>
 </head>
 <body>
 	<!-- TOPO -->

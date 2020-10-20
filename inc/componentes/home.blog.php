@@ -8,6 +8,7 @@
 				<div class="box_blog">
 
 					<?php 
+					
 					//percorre a variavel
 					$countBlog = count($vetBlog) - 1;
 					foreach ($vetBlog as $key => $value): 

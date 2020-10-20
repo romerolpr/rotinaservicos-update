@@ -1,27 +1,27 @@
-<?php if($URL[0] == 'home'): ?>
-	<div class="popup-box">
-		<span class="close">&times;</span>
-		<div class="content-popup">
-			<div class="col-12 p-0 show-mobile">
-				<div class="center">
-					<img src="<?=$url?>images/logo.png" title="<=$nomeSite?>" alt="<=$nomeSite?>">
-				</div>
+<?php if($URL[0] == 'home' && $popup): ?>
+<div class="popup-box">
+	<span class="close">&times;</span>
+	<div class="content-popup">
+		<div class="col-12 p-0 show-mobile">
+			<div class="center">
+				<img src="<?=$url?>images/logo.png" title="<=$nomeSite?>" alt="<=$nomeSite?>">
 			</div>
-			<div class="col-8 p-0">
-				<h2 class="tleft">CORRESPONDÊNCIAS: SEGURANÇA NO DESCARTE</h2>
-			</div>	
-			<div class="col-4 p-0 hide-mobile">
-				<img class="fright" src="<?=$url?>images/logo.png" title="<=$nomeSite?>" alt="<=$nomeSite?>">
-			</div>
-			<div class="clearfix"></div>
-			<br>
-			<p class="tjustify">Aumentaram significativamente com o distanciamento social, o número de compras via internet efetuadas por consumidores residentes em condomínio.</p>
-			<p class="tjustify">Como consequência, quase sempre ocorre o descartedas embalagens de maneira incorreta, indo muitas vezes informações pessoais de moradores pararem nas mãos de pessoas mal-intencionadas, colocando desta forma em risco, a sua segurança e a do próprio condomínio.</p>
-			<p class="tjustify">Estas mesmas pessoas mal-intencionadas, se aproveitam ainda para clonar correspondências, contraindo empréstimos em nomes destes mesmos consumidores desavisados, entre outros crimes.</p>
-			<p class="tjustify">Portanto, nossa sugestão é para que no descarte destas embalagens, o consumidor retire as etiquetas, as notas fiscais, entre outros, que contenham informações que possam ou poderiam ser utilizadas por criminosos de maneira fraudulenta.</p>
 		</div>
-		<div class="opacitybox"></div>
+		<div class="col-8 p-0">
+			<h2 class="tleft">CORRESPONDÊNCIAS: SEGURANÇA NO DESCARTE</h2>
+		</div>	
+		<div class="col-4 p-0 hide-mobile">
+			<img class="fright" src="<?=$url?>images/logo.png" title="<=$nomeSite?>" alt="<=$nomeSite?>">
+		</div>
+		<div class="clearfix"></div>
+		<br>
+		<p class="tjustify">Aumentaram significativamente com o distanciamento social, o número de compras via internet efetuadas por consumidores residentes em condomínio.</p>
+		<p class="tjustify">Como consequência, quase sempre ocorre o descartedas embalagens de maneira incorreta, indo muitas vezes informações pessoais de moradores pararem nas mãos de pessoas mal-intencionadas, colocando desta forma em risco, a sua segurança e a do próprio condomínio.</p>
+		<p class="tjustify">Estas mesmas pessoas mal-intencionadas, se aproveitam ainda para clonar correspondências, contraindo empréstimos em nomes destes mesmos consumidores desavisados, entre outros crimes.</p>
+		<p class="tjustify">Portanto, nossa sugestão é para que no descarte destas embalagens, o consumidor retire as etiquetas, as notas fiscais, entre outros, que contenham informações que possam ou poderiam ser utilizadas por criminosos de maneira fraudulenta.</p>
 	</div>
+	<div class="opacitybox"></div>
+</div>
 <?php endif; ?>
 
 <?php

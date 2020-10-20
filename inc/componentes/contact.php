@@ -31,12 +31,12 @@
 <div class="col-12 c-gray fleft" id="contato">
 	<div class="container">
 		<div class="col-12 p-0">
-			<div class="p-0 col-12 show-sm-mobile">
+			<!-- <div class="p-0 col-12 show-sm-mobile">
 				<div class="ad__box">
 					<p>Aproveite!</p>
 					<a href="#contato" class="__btn link goto" data-budget="cliente" title="Solicite seu orçamento"><h2>Solicite seu orçamento e ganhe 5% de desconto!</h2></a>
 				</div>
-			</div>	
+			</div> -->	
 			<div class="col-7 box__form pt-0" data-budget="colaborador">
 				<div class="load" style="display: none;"><span></span></div>
 				<?php
@@ -49,10 +49,10 @@
 			<div class="col-5 pt-0">
 				<div class="contato">
 
-					<div class="ad__box hide-sm-mobile">
+					<!-- <div class="ad__box hide-sm-mobile">
 						<p>Aproveite!</p>
 						<a href="#contato" class="__btn link goto" data-budget="cliente" title="Solicite seu orçamento"><h2>Solicite seu orçamento e ganhe 5% de desconto!</h2></a>
-					</div>
+					</div> -->
 
 					<span class="tag">#fiqueemcasa</span>
 
@@ -79,7 +79,7 @@
 						</span>
 					</p>
 					<div class="clearfix"></div>
-					<div class="location" id="iframe__map">
+					<div class="location">
 						<!-- Map -->
 					</div>
 				</div>

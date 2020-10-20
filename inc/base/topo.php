@@ -3,7 +3,7 @@
 		<div class="content_popup">
 			<p class="fleft">Nós usamos cookies para garantir que você tenha a melhor experiência em nosso site.</p>
 			<div class="md-center">
-				<a href="<?=$url?>#" class="__close" data-close=".aviso-popup"><span class="btn fright">Entendido!</span></a>
+				<a href="<?=$url?>#" class="__close" data-close=".aviso-popup"><span class="btn fright" id="close_popup">Entendido!</span></a>
 			</div>
 		</div>
 	</div>

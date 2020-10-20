@@ -27,11 +27,14 @@ include(BASE . 'canais.php');
 include(BASE . 'fone.php');
 
 //Whatsapp do site
-$text					= 'Olá,%20Gostaria%20de%20Saber%20Mais%20Sobre%20a%20Rotina%20Serviços%20Terceirizados!'; // mensagem do whatsapp
+$text					= '%20Gostaria%20de%20Saber%20Mais%20Sobre%20a%20Rotina%20Serviços%20Terceirizados!'; // mensagem do whatsapp
 $whatsapp 				= array('' . $ddd . '994210145', $text, true);
 
 //esconde erros
 error_reporting(0);
 ini_set(“display_errors”, 0 );
+
+
+$popup = false;
 
 ?>
