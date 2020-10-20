@@ -19,7 +19,7 @@ $today=$date;
 $host = $_SERVER['HTTP_HOST'];
 
 ## variável para desligar a verificação do recaptcha, se "true" habilita o recaptcha para testes
-$switch = false;
+$switch = true;
 
 //phpmailer
 require_once("PHPMailer/PHPMailer-master/PHPMailerAutoload.php");
