@@ -40,8 +40,8 @@
 							</h1>
 							<h3><?=$sloganSite?></h3>
 						</div>
-						<a href="#contato" title="Solicitar orçamento com 5% de desconto" class="link goto opacity1">
-						<span class="btn __btn" data-budget="cliente">Solicitar orçamento com 5% de desconto</span>
+						<a href="#contato" title="Solicite seu orçamento agora mesmo!" class="link goto opacity1">
+						<span class="btn __btn" data-budget="cliente">Solicite seu orçamento agora mesmo!</span>
 						</a>
 
 						<?php

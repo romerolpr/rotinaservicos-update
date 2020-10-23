@@ -33,7 +33,9 @@ else:
 	);
 
 	include (BASE . 'head.php');
-
+	
+	//vet para o blog
+	include(VETOR . 'blog.vet.php');
 ?>
 </head>
 <body>

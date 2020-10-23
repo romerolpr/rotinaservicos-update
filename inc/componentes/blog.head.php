@@ -1,4 +1,8 @@
 <?php
+
+//vet para o blog
+include(VETOR . 'blog.vet.php');
+
 //montar nome da página
 foreach ($vetBlog as $key => $value):
 	//percorre para definir o nome

@@ -89,10 +89,10 @@
 		<div class="arrow"></div>
 		<div class="container">
 			<div class="col-6">
-				<p>© 2020 Romero Service Ltda. Todos os direitos reservados.</p>
+				<p>© 2020 Romero Service Ltda. Todos os direitos reservados.<br><span class="txt-wattermarker">Desenvolvido por <a class="link" rel="nofollow" href="https://github.com/romerolpr" title="Lucas Romero" target="_blank">Lucas Romero</a></span></p>
 			</div>
 			<div class="col-6 hide-mobile">
-				<div class="fright">
+				<div class="fright m-5-percent-align">
 					<?php 
 					$footer = true;
 					include(COMPONENTES . 'canais.inc.php'); 
