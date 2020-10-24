@@ -1,5 +1,5 @@
 <?php 
-$title = 'Teste';
+$title = 'Início';
 $var = array(
 	'title' => $title,
 	'description' => $title . ' - fundada em 1997 e desde então atua nas áreas de portaria e controle de acesso, limpeza, zeladoria e conservação de condomínios residenciais, comércios e empresas em geral.',
