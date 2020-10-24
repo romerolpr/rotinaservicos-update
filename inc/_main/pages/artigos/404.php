@@ -7,6 +7,9 @@ $var = array(
 	'var' => $title . ', Inicio'
 );
 include(BASE . 'head.php');
+
+//vet para o blog
+include(VETOR . 'blog.vet.php');
 ?>
 </head>
 <body>
@@ -27,26 +30,22 @@ include(BASE . 'head.php');
 					<?php include(COMPONENTES . 'breadcrumb.php'); ?>
 
 					<?php  
-					$searchURL			= explode('-', $link->Link);
+
 					foreach ($vetBlog as $key => $valor):
 
 						//busca
 						$search 		= ucfirst(str_replace('-', ' ', $link->Link));
 
-						//realizar combinacao
-						$urlActual      = explode('-', $valor['url']);
-
-						foreach ($searchURL as $indice => $value):
-
-							$temp = $value;
-
-						endforeach;
-
 						//faz a combinacao
-						if(in_array($temp, $urlActual)):
-							$sugestao = array($valor['url'], $valor['name']);
+						if(preg_match('/' . strtolower($URL[1]) . '/', strtolower($valor['url']))):
+
+							$sugestao = array($valor['url'], $valor['name']); 
+							break;
+
 						else:
-							$sugestao = null;
+
+							$sugestao = false;
+
 						endif;
 
 					endforeach;
@@ -55,16 +54,14 @@ include(BASE . 'head.php');
 
 					
 
-					<?php if($sugestao!==null): ?>
+					<?php if($sugestao): ?>
 						<h2>Artigos semelhantes</h2>
 						<br>
-						<p>Pode ser que você esteja procurando por:</p>
-						<ul class="list">
-							<li><a href="<?=$url.'artigos/'.$sugestao[0]?>" class="link"><?=$sugestao[1]?></a></li>
-						</ul>
+						<p>Pode ser que você esteja procurando por: <a href="<?=$url.'artigos/'.$sugestao[0]?>" class="link"><?=$sugestao[1]?></a></p>
+
 					<?php else: ?>
 						<h2>Oops!</h2>
-						<p>Nada encontrado por <strong><?=$search?></strong>. Talvez o artigo não existe no site, ou não está mais disponível para leitura.</p>
+						<p>Nada encontrado por <strong><?= !$search ? $URL[1] : $search; ?></strong>, talvez o artigo não existe no site, ou não está mais disponível para leitura.</p>
 					<?php endif; ?>
 
 					<br>
@@ -85,7 +82,9 @@ include(BASE . 'head.php');
 							$autorBlog      = $valor['autor'];
 
 
-							if($sugestao !== null):
+							if($sugestao):
+
+								$i = 0;
 
 								if($valor['url'] == $sugestao[0]):
 
@@ -106,7 +105,11 @@ include(BASE . 'head.php');
 						<?php  	
 
 								endif; 
-							else: if($key < 2):?>
+							else: 
+
+								$i++;
+
+								if($i <= 3 && $key <= rand(1, count($vetBlog))): ?>
 
 								<div class="default-item">
 									<a href="<?=$urlBlog?>" title="<?=$titleBlog?>">
@@ -122,7 +125,9 @@ include(BASE . 'head.php');
 									</a>
 								</div>
 
-						<?php endif;endif; 
+						<?php endif;
+
+						endif; 
 						
 						endforeach; ?>
 
