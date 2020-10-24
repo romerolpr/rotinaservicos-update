@@ -1,24 +1,9 @@
 <?php
-## rewrite month
-(date('F')=='Feb') ? $month = 'Fev' : $month = date('F');
-(date('F')=='Mar') ? $month = 'Março' : $month = date('F');
-(date('F')=='Apr') ? $month = 'Abril' : $month = date('F');
-(date('F')=='May') ? $month = 'Maio' : $month = date('F');
-(date('F')=='June') ? $month = 'Jun' : $month = date('F');
-(date('F')=='July') ? $month = 'Julho' : $month = date('F');
-(date('F')=='Aug') ? $month = 'Ago' : $month = date('F');
-(date('F')=='Sept') ? $month = 'Set' : $month = date('F');
-(date('F')=='Oct') ? $month = 'Out' : $month = date('F');
-(date('F')=='Dec') ? $month = 'Dez' : $month = date('F');
-
-//montando o horario
-$date=date('j').' de '.$month.' de '.date('Y').', '.date('g:i a');
-$today=$date;
 
 ## definindo variavel do host
 $host = $_SERVER['HTTP_HOST'];
 
-## variável para desligar a verificação do recaptcha, se "true" habilita o recaptcha para testes
+## variável para desligar a verificação do recaptcha, se "false" habilita o recaptcha para testes
 $switch = true;
 
 //phpmailer

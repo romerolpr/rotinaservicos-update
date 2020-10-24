@@ -56,6 +56,7 @@
 			<h2 class="tcenter sublime">Sobre nós</h2>
 			<p class="tjustify">A <strong><?=$nomeSite?></strong> foi fundada em 1997 e desde então atua nas áreas de portaria e controle de acesso, limpeza, zeladoria e conservação de condomínios residenciais, comércios e empresas em geral.</p>
 			<p class="tjustify">Prezamos pela excelência e total atendimento às necessidades de nossos clientes, buscando completa satisfação, 24 horas ao dia, sete dias na semana. Enfatizamos que, entre nossas maiores premissas, estão o atendimento a qualquer momento do dia, através de nossa supervisão, como também a criteriosa seleção de nossos colaboradores, garantindo sempre segurança e eficiência em nossos serviços, além de também garantir preços extremamente competitivos e justos.</p>
+			<p class="tjustify">Nós possuímos o melhor preço disponível no mercado, pois conta com departamento de Contabilidade/ RH próprio e sede exclusiva, além de possuir profissionais altamente qualificados que fazem com que nossos custos sejam os menores possíveis.</p>
 		</div>
 		<div class="clear"></div>
 		<div class="col-4 effect fadeIn">
