@@ -1,0 +1,6 @@
+# Privar pasta inc/
+
+User-agent: *
+Disallow: /inc/
+
+Sitemap: https://www.rotinaserviocs.com/sitemap.xml
