@@ -1,6 +1,6 @@
 <?php
 //variaveis globais
-$nomeSite				= "Rotina Serviços Terceirizados";
+$nomeSite				= "Teste";
 $sloganSite				= "Terceirizar é economizar!";
 $ddd 					= "11";
 $contatoEmail			= "contato@rotinaservicos.com";
