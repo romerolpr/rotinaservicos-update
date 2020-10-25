@@ -12,10 +12,10 @@
 	<input type="text" name="nome" placeholder="Nome Completo" value="<?php if(isset($input['nome'])&&!empty($input['nome'])) echo $input['nome']?>" id="nome_cliente" required>
 
 	<label for="telefone_cliente">Telefone <span>*</span></label>
-	<input type="text" name="telefone" placeholder="Telefone" value="<?php if(isset($input['telefone'])&&!empty($input['telefone'])) echo $input['telefone']?>" id="telefone_cliente" required>
+	<input type="text" class="input_tel" name="telefone" placeholder="Telefone" value="<?php if(isset($input['telefone'])&&!empty($input['telefone'])) echo $input['telefone']?>" id="telefone_cliente" required>
 
 	<label for="telefone_2_cliente">Telefone 2 (opcional)</label>
-	<input type="text" name="telefone_2" placeholder="Telefone" value="<?php if(isset($input['telefone_2'])&&!empty($input['telefone_2'])) echo $input['telefone_2']?>" id="telefone_2_cliente">
+	<input type="text" class="input_tel" name="telefone_2" placeholder="Telefone" value="<?php if(isset($input['telefone_2'])&&!empty($input['telefone_2'])) echo $input['telefone_2']?>" id="telefone_2_cliente">
 
 	<label for="email_cliente">E-mail<span>*</span></label>
 	<input type="text" name="email" placeholder="E-mail" value="<?php if(isset($input['email'])&&!empty($input['email'])) echo $input['email']?>" id="email_cliente" required>

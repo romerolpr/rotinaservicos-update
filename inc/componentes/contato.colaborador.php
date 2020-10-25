@@ -11,7 +11,7 @@
 	<input type="text" name="email" placeholder="Email" value="<?php if(isset($input['email'])&&!empty($input['email'])) echo $input['email']?>" id="email_colb" required>
 
 	<label for="telefone_colb">Telefone <span>*</span></label>
-	<input type="text" name="telefone" placeholder="Telefone" value="<?php if(isset($input['telefone'])&&!empty($input['telefone'])) echo $input['telefone']?>" id="telefone_colb" required>
+	<input type="text" class="input_tel" name="telefone" placeholder="Telefone" value="<?php if(isset($input['telefone'])&&!empty($input['telefone'])) echo $input['telefone']?>" id="telefone_colb" required>
 
 	<label>Motivo de contato <span>*</span></label>
 	<select name="assunto" required>
