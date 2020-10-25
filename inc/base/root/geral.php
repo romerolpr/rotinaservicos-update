@@ -14,9 +14,9 @@ $latitude				= '-23.5358632';
 $longitude				= '-46.5331596';
 $mapLocation			= 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1828.956114093623!2d-46.53296648095091!3d-23.535659096461792!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2df134e6cc74676d!2sRotina%20Servi%C3%A7os%20Terceirizados!5e0!3m2!1spt-BR!2sbr!4v1582583413456!5m2!1spt-BR!2sbr';
 //google
-$Key 					= '6Lfn2-QUAAAAAPnZO6NWUqHYbKGlYCh5_NEblZXZ';
-$secret 				= '6Lfn2-QUAAAAACIdwm0r86XCfCTWhSYC_d70QS8P';
-$analytics				= 'G-NVL9JJYH5E';
+$Key 					= base64_decode('NkxlQVVOc1pBQUFBQUFjYjl6LTFGeUt2ZHVqTUNfMnVTZ0dTTm9Faw==');
+$secret 				= base64_decode('NkxlQVVOc1pBQUFBQVBuc0tDbE1BaWlxTWJQbmo5ekc3VHpqVU85Vg==');
+$analytics				= base64_decode('Ry1OVkw5SkpZSDVF');
 
 //menu
 include(BASE . 'menu.php');
