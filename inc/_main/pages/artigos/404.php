@@ -52,8 +52,6 @@ include(VETOR . 'blog.vet.php');
 					
 					?>
 
-					
-
 					<?php if($sugestao): ?>
 						<h2>Artigos semelhantes</h2>
 						<br>
@@ -65,7 +63,6 @@ include(VETOR . 'blog.vet.php');
 					<?php endif; ?>
 
 					<br>
-
 
 					<div class="content-item">
 
